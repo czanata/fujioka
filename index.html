@@ -135,15 +135,6 @@
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  id="frete-tab"
-                  data-bs-toggle="tab"
-                  href="#freteTab"
-                  ><i class="bi bi-truck-flatbed"></i> Frete</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
                   id="totalResumo-tab"
                   data-bs-toggle="tab"
                   href="#totalResumo"
@@ -261,12 +252,7 @@
                       <label class="form-label font-md" for="agrupamento"
                         >Agrupamento:</label
                       >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="agrupamento"
-                        disabled
-                        value="Agrupamento XPTO"
+                      <input type="text" class="form-control" id="agrupamento" disabled value="Agrupamento XPTO"
                       />
                     </div>
                   </div>
@@ -520,8 +506,7 @@
                     </ul>
                     <div class="tab-content mt-3" id="mySecondTabContent">
                       <div class="tab-pane fade show active" id="contatos">
-                        <div class="row d-flex align-items-end">
-                            
+                        <div class="row d-flex align-items-end">       
       <!-- validar este trecho-->
                             <div class="col-md-9">
                               <div class="form-group">
@@ -545,14 +530,13 @@
                               </div>
   
                             </div>
-      
-                            
       <!-- validar este trecho-->
                         </div>
                       </div>
                       <div class="tab-pane fade" id="agrupamento">
                         <h4>Agrupamento</h4>
-                        <!-- Campos da aba de Previsão -->
+
+                        <!-- Campos da aba de Agrupamento -->
                       </div>
                     </div>
                   </div>
@@ -699,6 +683,10 @@
                 <!-- Campos da aba de ITENS -->
                 <!-- Definir Plano de Pagamento e Qtdade de Parcelas -->
                 <div class="row">
+                  <!-- Botão "Adicionar itens" -->
+                  <div class="col-md-5 d-flex align-items-center">  
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Adicionar itens</button>
+                  </div>
                   <div class="col-md-5">
                     <div class="form-group">
                       <label class="form-label font-md" for="plano"
@@ -758,46 +746,64 @@
                                         Parcela(s)
                                       </th>
                                       <th class="border-end" scope="col">Prazo</th>
-                                      <th class="border-end" scope="col">Juros</th>
+                                      <th class="border-end" scope="col">Juros %</th>
                                       <th class="border-end" scope="col">Pgto Web</th>
+                                      <th class="border-end" scope="col">Plano Especial</th>
                                     </tr>
                                   </thead>
                                   <tbody>
                                     <tr>
-                                      <th class="border-end" scope="row">1</th>
+                                      <td class="border-end" scope="row">
+                                        <input type="radio" name="opcao" />
+                                      </td>
                                       <td class="border-end">1</td>
                                       <td class="border-end">A Vista</td>
                                       <td class="border-end">1</td>
                                       <td class="border-end">0</td>
                                       <td class="border-end">.00</td>
-                                      <td class="border-end">
-                                        <input type="checkbox" />
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled/>
+                                      </td>
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled checked/>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <th class="border-end" scope="row">2</th>
+                                      <td class="border-end" scope="row">
+                                        <input type="radio" name="opcao" />
+                                      </td>
                                       <td class="border-end">2</td>
                                       <td class="border-end">DT Boleto c/15 dias</td>
                                       <td class="border-end">1</td>
                                       <td class="border-end">0</td>
                                       <td class="border-end">.00</td>
-                                      <td class="border-end">
-                                        <input type="checkbox" />
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled/>
+                                      </td>
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled/>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <th class="border-end" scope="row">3</th>
+                                      <td class="border-end" scope="row">
+                                        <input type="radio" name="opcao" />
+                                      </td>
                                       <td class="border-end">3</td>
                                       <td class="border-end">DT Boleto c/20 dias</td>
                                       <td class="border-end">1</td>
                                       <td class="border-end">0</td>
                                       <td class="border-end">.00</td>
-                                      <td class="border-end">
-                                        <input type="checkbox" />
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled checked/>
+                                      </td>
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled/>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <th class="border-end" scope="row">4</th>
+                                      <td class="border-end" scope="row">
+                                        <input type="radio" name="opcao" />
+                                      </td>
                                       <td class="border-end">6</td>
                                       <td class="border-end">
                                         DT Boleto c/15/22/28 dias
@@ -805,21 +811,27 @@
                                       <td class="border-end">3</td>
                                       <td class="border-end">6</td>
                                       <td class="border-end">.00</td>
-                                      <td class="border-end">
-                                        <input type="checkbox" />
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled/>
+                                      </td>
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled checked/>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <th class="border-end" scope="row">4</th>
-                                      <td class="border-end">10</td>
-                                      <td class="border-end">
-                                        DT Boleto c/30/60 dias
+                                      <td class="border-end" scope="row">
+                                        <input type="radio" name="opcao" />
                                       </td>
+                                      <td class="border-end">10</td>
+                                      <td class="border-end">DT Boleto c/30/60 dias</td>
                                       <td class="border-end">2</td>
                                       <td class="border-end">30</td>
-                                      <td class="border-end">1.80</td>
-                                      <td class="border-end">
-                                        <input type="checkbox" />
+                                      <td class="border-end">1,80</td>
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled/>
+                                      </td>
+                                      <td class="border-end text-center">
+                                        <input type="checkbox" disabled/>
                                       </td>
                                     </tr>
                                   </tbody>
@@ -857,16 +869,6 @@
                     </div>
                   </div>
                 </div>
-      
-                <!-- Botão "Adicionar itens" -->
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-toggle="modal"
-                  data-target="#myModal"
-                >
-                  Adicionar itens
-                </button>
                 <!-- Tabela principal -->
                 <div class="table-responsive">
                   <table class="table table-striped font-md">
@@ -874,9 +876,7 @@
                       <tr>
                         <th>Artigo</th>
                         <th>Nome do Artigo</th>
-                        <th>P/C</th>
-                        <th>Qtd Pedida</th>
-                        <th>Q. Atendida</th>
+                        <th>Qtdade</th>
                         <th>Preço</th>
                         <th>Desconto</th>
                         <th>Desc %</th>
@@ -890,10 +890,6 @@
                         <th>RO %</th>
                         <th>Repasse</th>
                         <th>Repasse extra</th>
-                        <!--th>Situação</th>
-                        <th>Ligar</th>
-                        <th>SBT?</th>
-                        <th>PPB</th-->
                         <th>CFOP</th>
                         <th>Desoneração unit.</th>
                         <th>Valor Frete</th>
@@ -909,8 +905,6 @@
                       <tr>
                         <td>001</td>
                         <td>Smartphone XYZ</td>
-                        <td>Produto</td>
-                        <td>2</td>
                         <td>2</td>
                         <td>R$ 1.000,00</td>
                         <td>
@@ -963,10 +957,6 @@
                             </button>
                           </div>
                         </td>
-                        <!--td>Normal</td>
-                        <td><input type="checkbox" /></td>
-                        <td><input type="checkbox" checked /></td>
-                        <td><i class="bi bi-mailbox2"></i></td-->
                         <td>6404-1</td>
                         <td>0,00</td>
                         <td>0,00</td>
@@ -980,8 +970,6 @@
                       <tr>
                         <td>002</td>
                         <td>Fone de Ouvido ABC</td>
-                        <td>Acessório</td>
-                        <td>5</td>
                         <td>5</td>
                         <td>R$ 50,00</td>
                         <td>
@@ -1034,10 +1022,6 @@
                             </button>
                           </div>
                         </td>
-                        <!--td>Normal</td>
-                        <td><input type="checkbox" /></td>
-                        <td><input type="checkbox" checked /></td>
-                        <td><i class="bi bi-mailbox2"></i></td-->
                         <td>6404-1</td>
                         <td>0,00</td>
                         <td>0,00</td>
@@ -1051,8 +1035,6 @@
                       <tr>
                         <td>003</td>
                         <td>Carregador USB</td>
-                        <td>Acessório</td>
-                        <td>3</td>
                         <td>3</td>
                         <td>R$ 20,00</td>
                         <td>
@@ -1105,10 +1087,6 @@
                             </button>
                           </div>
                         </td>
-                        <!--td>Normal</td>
-                        <td><input type="checkbox" /></td>
-                        <td><input type="checkbox" checked /></td>
-                        <td><i class="bi bi-mailbox2"></i></td-->
                         <td>6404-1</td>
                         <td>0,00</td>
                         <td>0,00</td>
@@ -1122,8 +1100,6 @@
                       <tr>
                         <td>004</td>
                         <td>Capa para Celular</td>
-                        <td>Acessório</td>
-                        <td>1</td>
                         <td>1</td>
                         <td>R$ 30,00</td>
                         <td>
@@ -1177,10 +1153,6 @@
                             </button>
                           </div>
                         </td>
-                        <!--td>Normal</td>
-                        <td><input type="checkbox" /></td>
-                        <td><input type="checkbox" checked /></td>
-                        <td><i class="bi bi-mailbox2"></i></td-->
                         <td>6404-1</td>
                         <td>0,00</td>
                         <td>0,00</td>
@@ -1329,253 +1301,9 @@
                   </div>
                 </div>
                 <!-- Janela modal para adicionar itens -->
-                <div
-                  class="modal fade"
-                  id="myModal"
-                  tabindex="-1"
-                  role="dialog"
-                  aria-labelledby="myModalLabel"
-                >
-                  <div
-                    class="modal-dialog modal-lg modal-dialog-centered"
-                    role="document"
-                  >
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="myModalLabel">
-                          Adicionar Itens
-                        </h5>
-                        <button
-                          type="button"
-                          class="btn-close"
-                          data-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="d-flex flex-column gap-3 modal-body">
-                        <div class="row d-flex align-items-end">
-                          <div class="d-grid d-flex gap-2 align-items-end">
-                            <div class="col-md-3 me-3">
-                              <div class="form-group mb-0">
-                                <label for="codigo">Código:</label>
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  id="codigo"
-                                />
-                              </div>
-                            </div>
-                            <button class="btn btn-secondary" type="button">
-                              Listar
-                            </button>
-                            <button class="btn btn-secondary" type="button">
-                              Recomendação
-                            </button>
-                          </div>
-                        </div>
-                        <hr />
-                        <div class="row d-flex gap-1">
-                          <p class="fw-bold">Opções de Filtro</p>
-                          <div class="col-md-5">
-                            <label class="form-label font-md">Grupo </label>
-                            <div class="input-group">
-                              <input
-                                type="text"
-                                aria-label="matricula"
-                                class="form-control font-md"
-                              />
-                              <input
-                                type="text"
-                                class="form-control"
-                                aria-label="Recipient's username"
-                                aria-describedby="button-addon2"
-                              />
-                              <button
-                                class="btn btn-outline-secondary"
-                                type="button"
-                                id="button-addon2"
-                              >
-                                <i class="bi bi-search"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="col-md-5">
-                            <label class="form-label font-md">Subgrupo</label>
-                            <div class="input-group">
-                              <input
-                                type="text"
-                                aria-label="matricula"
-                                class="form-control font-md"
-                              />
-                              <input
-                                type="text"
-                                class="form-control"
-                                aria-label="Recipient's username"
-                                aria-describedby="button-addon2"
-                              />
-                              <button
-                                class="btn btn-outline-secondary"
-                                type="button"
-                                id="button-addon2"
-                              >
-                                <i class="bi bi-search"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="col-md-5">
-                            <label class="form-label font-md">Linha</label>
-                            <div class="input-group">
-                              <input
-                                type="text"
-                                aria-label="matricula"
-                                class="form-control font-md"
-                              />
-                              <input
-                                type="text"
-                                class="form-control"
-                                aria-label="Recipient's username"
-                                aria-describedby="button-addon2"
-                              />
-                              <button
-                                class="btn btn-outline-secondary"
-                                type="button"
-                                id="button-addon2"
-                              >
-                                <i class="bi bi-search"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="col-md-3">
-                            <label class="form-label font-md">Marca</label>
-                            <div class="input-group">
-                              <input
-                                type="text"
-                                aria-label="matricula"
-                                class="form-control font-md"
-                              />
-                              <button
-                                class="btn btn-outline-secondary"
-                                type="button"
-                                id="button-addon2"
-                              >
-                                <i class="bi bi-search"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="col-md-3">
-                            <label class="form-label font-md">Modelo</label>
-                            <div class="input-group">
-                              <input
-                                type="text"
-                                aria-label="matricula"
-                                class="form-control font-md"
-                              />
-                              <button
-                                class="btn btn-outline-secondary"
-                                type="button"
-                                id="button-addon2"
-                              >
-                                <i class="bi bi-search"></i>
-                              </button>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <label class="form-label font-md">Descrição</label>
-                            <div class="input-group">
-                              <input
-                                type="text"
-                                aria-label="matricula"
-                                class="form-control font-md"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                        <hr />
-                        <!-- Tabela na janela modal -->
-                        <table class="table table-sm table-striped">
-                          <thead>
-                            <tr>
-                              <th>Artigo</th>
-                              <th>Descrição</th>
-                              <th>Estoque</th>
-                              <th>Preço Venda</th>
-                              <th>Promocional</th>
-                              <th>Grupo de Preço</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <!-- Dados hipotéticos na tabela da janela modal -->
-                            <tr>
-                              <td>005</td>
-                              <td>Smartphone ABC</td>
-                              <td>10</td>
-                              <td>R$ 900,00</td>
-                              <td>R$ 800,00</td>
-                              <td>Grupo 1</td>
-                            </tr>
-                            <tr>
-                              <td>006</td>
-                              <td>Fone de Ouvido XYZ</td>
-                              <td>20</td>
-                              <td>R$ 40,00</td>
-                              <td>R$ 35,00</td>
-                              <td>Grupo 2</td>
-                            </tr>
-                            <tr>
-                              <td>007</td>
-                              <td>Carregador USB Plus</td>
-                              <td>5</td>
-                              <td>R$ 25,00</td>
-                              <td>R$ 20,00</td>
-                              <td>Grupo 1</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="d-flex modal-footer">
-                        <div class="d-flex gap-2 flex-grow-1">
-                          <div class="form-check">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="flexCheckDefault"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="flexCheckDefault"
-                            >
-                              Mostrar itens com estoque zerado
-                            </label>
-                          </div>
-                          <button type="button" class="btn btn-secondary">
-                            Preço
-                          </button>
-                          <button type="button" class="btn btn-secondary">
-                            Novo Filtro
-                          </button>
-                        </div>
-                        <button
-                          type="button"
-                          class="btn btn-secondary"
-                          data-dismiss="modal"
-                        >
-                          Selecionar
-                        </button>
-                        <button
-                          type="button"
-                          class="btn btn-primary"
-                          data-dismiss="modal"
-                        >
-                          Sair
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="freteTab">
-                <div class="d-flex justify-content-center">
+
+                <div style="height: 20px;"></div>
+                <div class="d-flex">
                   <div class="row w-75 mb-20">
                     <div class="accordion" id="accordionPanelsStayOpenExample02">
                       <div class="accordion-item">
@@ -1847,7 +1575,252 @@
                     </div>
                   </div>
                 </div>
-                <!-- Campos da aba de Previsão -->
+              
+
+                <div
+                  class="modal fade"
+                  id="myModal"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="myModalLabel"
+                >
+                  <div
+                    class="modal-dialog modal-lg modal-dialog-centered"
+                    role="document"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">
+                          Adicionar Itens
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="d-flex flex-column gap-3 modal-body">
+                        <div class="row d-flex align-items-end">
+                          <div class="d-grid d-flex gap-2 align-items-end">
+                            <div class="col-md-3 me-3">
+                              <div class="form-group mb-0">
+                                <label for="codigo">Código:</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="codigo"
+                                />
+                              </div>
+                            </div>
+                            <button class="btn btn-secondary" type="button">
+                              Listar
+                            </button>
+                            <button class="btn btn-secondary" type="button">
+                              Recomendação
+                            </button>
+                          </div>
+                        </div>
+                        <hr />
+                        <div class="row d-flex gap-1">
+                          <p class="fw-bold">Opções de Filtro</p>
+                          <div class="col-md-5">
+                            <label class="form-label font-md">Grupo </label>
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                aria-label="matricula"
+                                class="form-control font-md"
+                              />
+                              <input
+                                type="text"
+                                class="form-control"
+                                aria-label="Recipient's username"
+                                aria-describedby="button-addon2"
+                              />
+                              <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                id="button-addon2"
+                              >
+                                <i class="bi bi-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="col-md-5">
+                            <label class="form-label font-md">Subgrupo</label>
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                aria-label="matricula"
+                                class="form-control font-md"
+                              />
+                              <input
+                                type="text"
+                                class="form-control"
+                                aria-label="Recipient's username"
+                                aria-describedby="button-addon2"
+                              />
+                              <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                id="button-addon2"
+                              >
+                                <i class="bi bi-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="col-md-5">
+                            <label class="form-label font-md">Linha</label>
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                aria-label="matricula"
+                                class="form-control font-md"
+                              />
+                              <input
+                                type="text"
+                                class="form-control"
+                                aria-label="Recipient's username"
+                                aria-describedby="button-addon2"
+                              />
+                              <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                id="button-addon2"
+                              >
+                                <i class="bi bi-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <label class="form-label font-md">Marca</label>
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                aria-label="matricula"
+                                class="form-control font-md"
+                              />
+                              <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                id="button-addon2"
+                              >
+                                <i class="bi bi-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <label class="form-label font-md">Modelo</label>
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                aria-label="matricula"
+                                class="form-control font-md"
+                              />
+                              <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                id="button-addon2"
+                              >
+                                <i class="bi bi-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label font-md">Descrição</label>
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                aria-label="matricula"
+                                class="form-control font-md"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <hr />
+                        <!-- Tabela na janela modal -->
+                        <table class="table table-sm table-striped">
+                          <thead>
+                            <tr>
+                              <th>Artigo</th>
+                              <th>Descrição</th>
+                              <th>Estoque</th>
+                              <th>Preço Venda</th>
+                              <th>Promocional</th>
+                              <th>Grupo de Preço</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!-- Dados hipotéticos na tabela da janela modal -->
+                            <tr>
+                              <td>005</td>
+                              <td>Smartphone ABC</td>
+                              <td>10</td>
+                              <td>R$ 900,00</td>
+                              <td>R$ 800,00</td>
+                              <td>Grupo 1</td>
+                            </tr>
+                            <tr>
+                              <td>006</td>
+                              <td>Fone de Ouvido XYZ</td>
+                              <td>20</td>
+                              <td>R$ 40,00</td>
+                              <td>R$ 35,00</td>
+                              <td>Grupo 2</td>
+                            </tr>
+                            <tr>
+                              <td>007</td>
+                              <td>Carregador USB Plus</td>
+                              <td>5</td>
+                              <td>R$ 25,00</td>
+                              <td>R$ 20,00</td>
+                              <td>Grupo 1</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="d-flex modal-footer">
+                        <div class="d-flex gap-2 flex-grow-1">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckDefault"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="flexCheckDefault"
+                            >
+                              Mostrar itens com estoque zerado
+                            </label>
+                          </div>
+                          <button type="button" class="btn btn-secondary">
+                            Preço
+                          </button>
+                          <button type="button" class="btn btn-secondary">
+                            Novo Filtro
+                          </button>
+                        </div>
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal"
+                        >
+                          Selecionar
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          data-dismiss="modal"
+                        >
+                          Sair
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- TOTAL RESUMO-->
               <div class="tab-pane fade" id="totalResumo">
