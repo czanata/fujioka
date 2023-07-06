@@ -54,12 +54,12 @@
       .footer {
         position: absolute;
         bottom: 0px;
-        height: 100px;
+        height: 70px;
         left: 0px;
         right: 0px;
         overflow: hidden;
         background-color: #f8f9fa;
-        padding: 20px;
+        padding: 10px;
         text-align: right;
       }
 
@@ -69,6 +69,7 @@
         top: 30px;
         left: 0px;
         right: 0px;
+        max-height: calc(100vh - 120px);
         overflow: auto;
       }
 
@@ -526,10 +527,11 @@
                               <div class="form-group">
                                 <label class="form-label font-md" for="contato">Contato:</label>
                                 <div class="input-group">
-                                  <select class="form-control" id="contato">
-                                    <option value="contato1">Pedro Augusto de Oliveira Filho - Vendedor</option>
-                                    <option value="contato2">DT Boleto c/15 dias</option>
-                                    <option value="contato3">DT Boleto c/20 dias</option>
+                                  <select class="form-select form-select-sm"
+                                  aria-label=".form-select-sm example" id="contato">
+                                    <option value="contato1" selected>Pedro Augusto de Oliveira Filho - Vendedor</option>
+                                    <option value="contato2">João Tavares - Supervisor</option>
+                                    <option value="contato3">Maria Augusta da Silveira - Vendedor</option>
                                   </select>
                                 </div>
                               </div>
@@ -1573,276 +1575,271 @@
                 </div>
               </div>
               <div class="tab-pane fade" id="freteTab">
-                <div
-                  class="accordion w-50 mb-5"
-                  id="accordionPanelsStayOpenExample02"
-                >
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#panelsFrete01"
-                        aria-expanded="false"
-                        aria-controls="panelsFrete01"
-                      >
-                        Local de Estoque GO
-                      </button>
-                    </h2>
-                    <div
-                      id="panelsFrete01"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="panelsStayOpen-headingOne"
-                    >
-                      <div class="accordion-body">
-                        <div class="row gap-3">
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md"
-                                >Produtos</span
-                              >
-                              <select
-                                class="form-select form-select-sm"
-                                aria-label=".form-select-sm example"
-                              >
-                                <option value="1" selected>
-                                  256365 - Smartphone XYZ
-                                </option>
-                                <option value="2">632564 - Carregador USB</option>
-                                <option value="3">
-                                  251546 - Capa para Celular
-                                </option>
-                              </select>
+                <div class="d-flex justify-content-center">
+                  <div class="row w-75 mb-20">
+                    <div class="accordion" id="accordionPanelsStayOpenExample02">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsFrete01"
+                            aria-expanded="false"
+                            aria-controls="panelsFrete01"
+                          >
+                            Local de Estoque GO
+                          </button>
+                        </h2>
+                        <div
+                          id="panelsFrete01"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingOne"
+                        >
+                        <div class="accordion-body">
+                          <div class="row gap-3">
+                            <div class="col-md-12">
+                              <div class="input-group">
+                                <span class="input-group-text font-md"
+                                  >Produtos</span
+                                >
+                                <select
+                                  class="form-select form-select-sm"
+                                  aria-label=".form-select-sm example"
+                                >
+                                  <option value="1">256365 - Smartphone XYZ</option>
+                                  <option value="2" selected>
+                                    632564 - Carregador USB
+                                  </option>
+                                  <option value="3">
+                                    251546 - Capa para Celular
+                                  </option>
+                                </select>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md"
-                                >Tipo de Frete</span
-                              >
-                              <select
-                                class="form-select form-select-sm"
-                                aria-label=".form-select-sm example"
-                              >
-                                <option selected disabled>
-                                  Selecione uma opção
-                                </option>
-                                <option value="1">Tipo 01</option>
-                                <option value="2">Tipo 02</option>
-                                <option value="3">Tipo 03</option>
-                              </select>
+                            <div class="col-md-12">
+                              <div class="input-group">
+                                <span class="input-group-text font-md"
+                                  >Tipo de Frete</span
+                                >
+                                <select
+                                  class="form-select form-select-sm"
+                                  aria-label=".form-select-sm example"
+                                >
+                                  <option value="1" selected>Emitente</option>
+                                  <option value="2">Destinatário</option>
+                                  <option value="3">Sem frete</option>
+                                </select>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md">Frete</span>
-                              <select
-                                class="form-select form-select-sm"
-                                aria-label=".form-select-sm example"
-                              >
-                                <option selected disabled>
-                                  Selecione uma opção
-                                </option>
-                                <option value="1">
-                                  52.378.678/0001-00 - Transportadora 01 - R$
-                                  5.763.56
-                                </option>
-                                <option value="1">
-                                  68.345.258/0001-00 - Transportadora 02 - R$
-                                  2.563.56
-                                </option>
-                                <option value="1">
-                                  15.945.813/0002-00 - Transportadora 03 - R$
-                                  9.863.56
-                                </option>
-                                <option value="1">
-                                  82.247.948/0001-00 - Transportadora 04 - R$
-                                  6.363.56
-                                </option>
-                              </select>
+                            <div class="col-md-12">
+                              <div class="input-group">
+                                <span class="input-group-text font-md">Frete</span>
+                                <select
+                                  class="form-select form-select-sm"
+                                  aria-label=".form-select-sm example"
+                                >
+                                  <option selected disabled>
+                                    Selecione uma opção
+                                  </option>
+                                  <option value="1">
+                                    52.378.678/0001-00 - Transportadora 01 - R$
+                                    5.763,56
+                                  </option>
+                                  <option value="1">
+                                    68.345.258/0001-00 - Transportadora 02 - R$
+                                    2.563,56
+                                  </option>
+                                  <option value="1">
+                                    15.945.813/0002-00 - Transportadora 03 - R$
+                                    9.863,56
+                                  </option>
+                                  <option value="1">
+                                    82.247.948/0001-00 - Transportadora 04 - R$
+                                    6.363,56
+                                  </option>
+                                </select>
+                              </div>
                             </div>
-                          </div>
-                          <ul class="row row-cols-2">
-                            <li class="col"><strong>Prazo:</strong> 99 dias</li>
-                            <li class="col"><strong>% Frete:</strong> 99,99%</li>
-                            <li class="col">
-                              <strong>Tipo de Transporte:</strong> 99 dias
-                            </li>
-                            <li class="col">
-                              <strong>Tipo de Entrega:</strong> 99 dias
-                            </li>
-                          </ul>
-                          <div class="col-md-4">
-                            <label class="form-label font-md">Desconto %</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-4">
-                            <label class="form-label font-md">Desconto R$</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-3">
-                            <label class="form-label font-md">Novo Frete</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md">Motivo</span>
-                              <select
-                                class="form-select form-select-sm"
-                                aria-label=".form-select-sm example"
-                              >
-                                <option selected disabled>
-                                  Selecione uma opção
-                                </option>
-                                <option value="1">Motivo 01</option>
-                                <option value="2">Motivo 02</option>
-                                <option value="3">Motivo 03</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md"
-                                >Observação</span
-                              >
+                            <ul class="row row-cols-2">
+                              <li class="col"><strong>Prazo:</strong> 99 dias</li>
+                              <li class="col"><strong>% Frete:</strong> 99,99%</li>
+                              <li class="col">
+                                <strong>Tipo de Transporte:</strong> 99 dias
+                              </li>
+                              <li class="col">
+                                <strong>Tipo de Entrega:</strong> 99 dias
+                              </li>
+                            </ul>
+                            <div class="col-md-4">
+                              <label class="form-label font-md">Desconto %</label>
                               <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                              <label class="form-label font-md">Desconto R$</label>
+                              <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                              <label class="form-label font-md">Novo Frete</label>
+                              <input type="text" class="form-control" />
+                            </div>
+                            <div class="col-md-12">
+                              <div class="input-group">
+                                <span class="input-group-text font-md">Motivo</span>
+                                <select
+                                  class="form-select form-select-sm"
+                                  aria-label=".form-select-sm example"
+                                >
+                                  <option selected disabled>
+                                    Selecione uma opção
+                                  </option>
+                                  <option value="1">Motivo 01</option>
+                                  <option value="2">Motivo 02</option>
+                                  <option value="3">Motivo 03</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="input-group">
+                                <span class="input-group-text font-md"
+                                  >Observação</span
+                                >
+                                <input type="text" class="form-control" />
+                              </div>
                             </div>
                           </div>
                         </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#panelsFrete02"
-                        aria-expanded="false"
-                        aria-controls="panelsFrete02"
-                      >
-                        Local de Estoque DF
-                      </button>
-                    </h2>
-                    <div
-                      id="panelsFrete02"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="panelsStayOpen-headingTwo"
-                    >
-                      <div class="accordion-body">
-                        <div class="row gap-3">
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md"
-                                >Produtos</span
-                              >
-                              <select
-                                class="form-select form-select-sm"
-                                aria-label=".form-select-sm example"
-                              >
-                                <option value="1">256365 - Smartphone XYZ</option>
-                                <option value="2" selected>
-                                  632564 - Carregador USB
-                                </option>
-                                <option value="3">
-                                  251546 - Capa para Celular
-                                </option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md"
-                                >Tipo de Frete</span
-                              >
-                              <select
-                                class="form-select form-select-sm"
-                                aria-label=".form-select-sm example"
-                              >
-                                <option selected disabled>
-                                  Selecione uma opção
-                                </option>
-                                <option value="1">Tipo 01</option>
-                                <option value="2">Tipo 02</option>
-                                <option value="3">Tipo 03</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md">Frete</span>
-                              <select
-                                class="form-select form-select-sm"
-                                aria-label=".form-select-sm example"
-                              >
-                                <option selected disabled>
-                                  Selecione uma opção
-                                </option>
-                                <option value="1">
-                                  52.378.678/0001-00 - Transportadora 01 - R$
-                                  5.763.56
-                                </option>
-                                <option value="1">
-                                  68.345.258/0001-00 - Transportadora 02 - R$
-                                  2.563.56
-                                </option>
-                                <option value="1">
-                                  15.945.813/0002-00 - Transportadora 03 - R$
-                                  9.863.56
-                                </option>
-                                <option value="1">
-                                  82.247.948/0001-00 - Transportadora 04 - R$
-                                  6.363.56
-                                </option>
-                              </select>
-                            </div>
-                          </div>
-                          <ul class="row row-cols-2">
-                            <li class="col"><strong>Prazo:</strong> 99 dias</li>
-                            <li class="col"><strong>% Frete:</strong> 99,99%</li>
-                            <li class="col">
-                              <strong>Tipo de Transporte:</strong> 99 dias
-                            </li>
-                            <li class="col">
-                              <strong>Tipo de Entrega:</strong> 99 dias
-                            </li>
-                          </ul>
-                          <div class="col-md-4">
-                            <label class="form-label font-md">Desconto %</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-4">
-                            <label class="form-label font-md">Desconto R$</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-3">
-                            <label class="form-label font-md">Novo Frete</label>
-                            <input type="text" class="form-control" />
-                          </div>
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md">Motivo</span>
-                              <select
-                                class="form-select form-select-sm"
-                                aria-label=".form-select-sm example"
-                              >
-                                <option selected disabled>
-                                  Selecione uma opção
-                                </option>
-                                <option value="1">Motivo 01</option>
-                                <option value="2">Motivo 02</option>
-                                <option value="3">Motivo 03</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="input-group">
-                              <span class="input-group-text font-md"
-                                >Observação</span
-                              >
-                              <input type="text" class="form-control" />
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsFrete02"
+                            aria-expanded="false"
+                            aria-controls="panelsFrete02"
+                          >
+                            Local de Estoque DF
+                          </button>
+                        </h2>
+                        <div
+                          id="panelsFrete02"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingTwo"
+                        >
+                          <div class="accordion-body">
+                            <div class="row gap-3">
+                              <div class="col-md-12">
+                                <div class="input-group">
+                                  <span class="input-group-text font-md"
+                                    >Produtos</span
+                                  >
+                                  <select
+                                    class="form-select form-select-sm"
+                                    aria-label=".form-select-sm example"
+                                  >
+                                    <option value="1">256365 - Smartphone XYZ</option>
+                                    <option value="2" selected>
+                                      632564 - Carregador USB
+                                    </option>
+                                    <option value="3">
+                                      251546 - Capa para Celular
+                                    </option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="input-group">
+                                  <span class="input-group-text font-md"
+                                    >Tipo de Frete</span
+                                  >
+                                  <select
+                                    class="form-select form-select-sm"
+                                    aria-label=".form-select-sm example"
+                                  >
+                                    <option value="1" selected>Emitente</option>
+                                    <option value="2">Destinatário</option>
+                                    <option value="3">Sem frete</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="input-group">
+                                  <span class="input-group-text font-md">Frete</span>
+                                  <select
+                                    class="form-select form-select-sm"
+                                    aria-label=".form-select-sm example"
+                                  >
+                                    <option selected disabled>
+                                      Selecione uma opção
+                                    </option>
+                                    <option value="1">
+                                      52.378.678/0001-00 - Transportadora 01 - R$
+                                      5.763,56
+                                    </option>
+                                    <option value="1">
+                                      68.345.258/0001-00 - Transportadora 02 - R$
+                                      2.563,56
+                                    </option>
+                                    <option value="1">
+                                      15.945.813/0002-00 - Transportadora 03 - R$
+                                      9.863,56
+                                    </option>
+                                    <option value="1">
+                                      82.247.948/0001-00 - Transportadora 04 - R$
+                                      6.363,56
+                                    </option>
+                                  </select>
+                                </div>
+                              </div>
+                              <ul class="row row-cols-2">
+                                <li class="col"><strong>Prazo:</strong> 99 dias</li>
+                                <li class="col"><strong>% Frete:</strong> 99,99%</li>
+                                <li class="col">
+                                  <strong>Tipo de Transporte:</strong> 99 dias
+                                </li>
+                                <li class="col">
+                                  <strong>Tipo de Entrega:</strong> 99 dias
+                                </li>
+                              </ul>
+                              <div class="col-md-4">
+                                <label class="form-label font-md">Desconto %</label>
+                                <input type="text" class="form-control" />
+                              </div>
+                              <div class="col-md-4">
+                                <label class="form-label font-md">Desconto R$</label>
+                                <input type="text" class="form-control" />
+                              </div>
+                              <div class="col-md-3">
+                                <label class="form-label font-md">Novo Frete</label>
+                                <input type="text" class="form-control" />
+                              </div>
+                              <div class="col-md-12">
+                                <div class="input-group">
+                                  <span class="input-group-text font-md">Motivo</span>
+                                  <select
+                                    class="form-select form-select-sm"
+                                    aria-label=".form-select-sm example"
+                                  >
+                                    <option selected disabled>
+                                      Selecione uma opção
+                                    </option>
+                                    <option value="1">Motivo 01</option>
+                                    <option value="2">Motivo 02</option>
+                                    <option value="3">Motivo 03</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="input-group">
+                                  <span class="input-group-text font-md"
+                                    >Observação</span
+                                  >
+                                  <input type="text" class="form-control" />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1856,104 +1853,28 @@
               <div class="tab-pane fade" id="totalResumo">
                 <!-- Campos da aba de Totais -->
                 <!--totais-->
-                <div class="row w-75 mb-5">
-                  <h5>Total por Entrega</h5>
-                  <div class="accordion" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#panelsStayOpen-collapseOne"
-                          aria-expanded="false"
-                          aria-controls="panelsStayOpen-collapseOne"
+                <div class="d-flex justify-content-center">
+                  <div class="row w-75 mb-18">
+                    <h5>Total por Entrega</h5>
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne"
+                            aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseOne"
+                          >
+                            Local de Estoque GO
+                          </button>
+                        </h2>
+                        <div
+                          id="panelsStayOpen-collapseOne"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingOne"
                         >
-                          Local de Estoque GO
-                        </button>
-                      </h2>
-                      <div
-                        id="panelsStayOpen-collapseOne"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingOne"
-                      >
-                        <div class="accordion-body">
-                          <div class="row gap-3">
-                            <ul class="col-md-6">
-                              <li class="d-flex text-start">
-                                <strong class="flex-grow-1">Total dos Produtos: </strong
-                                >R$ 6.225,29
-                              </li>
-                              <li class="d-flex text-start">
-                                <strong class="flex-grow-1">Juros: </strong>R$ 118,87
-                                <i
-                                  class="bi bi-dash-circle ms-3 text-success fw-bold"
-                                ></i>
-                              </li>
-                              <li class="d-flex">
-                                <strong class="flex-grow-1">Descontos: </strong>R$ 60,00
-                                <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
-                              </li>
-                              <li class="d-flex">
-                                <strong class="flex-grow-1"
-                                  >Total com Descontos/Juros: </strong
-                                >R$ 6.284,16 <i class="ms-3 fw-bold">=</i>
-                              </li>
-                              <li class="d-flex">
-                                <strong class="flex-grow-1">ICMS/ST: </strong>R$ 628,40
-                                <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
-                              </li>
-                              <li class="d-flex">
-                                <strong class="flex-grow-1">IPI: </strong>R$ 49,63
-                                <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
-                              </li>
-                              <li class="d-flex">
-                                <strong class="flex-grow-1">Desoneração: </strong>R$
-                                1.292,53
-                                <i
-                                  class="bi bi-dash-circle ms-3 text-success fw-bold"
-                                ></i>
-                              </li>
-                              <li class="d-flex">
-                                <strong class="flex-grow-1">Frete: </strong>R$ 142,92
-                                <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
-                              </li>
-                              <li class="d-flex">
-                                <strong class="flex-grow-1">Total do Pedido: </strong>R$
-                                5.812,58 <i class="ms-3 fw-bold">=</i>
-                              </li>
-                            </ul>
-                            <ul class="col-md-5">
-                              <li class="d-flex">
-                                <strong class="flex-grow-1">Valor RO: </strong>R$ 335,63
-                              </li>
-                              <li class="d-flex">
-                                <strong class="flex-grow-1">% RO: </strong>6,72%
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#panelsStayOpen-collapseTwo"
-                          aria-expanded="false"
-                          aria-controls="panelsStayOpen-collapseTwo"
-                        >
-                          Local de Estoque DF
-                        </button>
-                      </h2>
-                      <div
-                        id="panelsStayOpen-collapseTwo"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="panelsStayOpen-headingTwo"
-                      >
-                        <div class="accordion-body">
                           <div class="accordion-body">
                             <div class="row gap-3">
                               <ul class="col-md-6">
@@ -1969,9 +1890,7 @@
                                 </li>
                                 <li class="d-flex">
                                   <strong class="flex-grow-1">Descontos: </strong>R$ 60,00
-                                  <i
-                                    class="bi bi-plus-circle ms-3 text-danger fw-bold"
-                                  ></i>
+                                  <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
                                 </li>
                                 <li class="d-flex">
                                   <strong class="flex-grow-1"
@@ -1980,15 +1899,11 @@
                                 </li>
                                 <li class="d-flex">
                                   <strong class="flex-grow-1">ICMS/ST: </strong>R$ 628,40
-                                  <i
-                                    class="bi bi-plus-circle ms-3 text-danger fw-bold"
-                                  ></i>
+                                  <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
                                 </li>
                                 <li class="d-flex">
                                   <strong class="flex-grow-1">IPI: </strong>R$ 49,63
-                                  <i
-                                    class="bi bi-plus-circle ms-3 text-danger fw-bold"
-                                  ></i>
+                                  <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
                                 </li>
                                 <li class="d-flex">
                                   <strong class="flex-grow-1">Desoneração: </strong>R$
@@ -1999,9 +1914,7 @@
                                 </li>
                                 <li class="d-flex">
                                   <strong class="flex-grow-1">Frete: </strong>R$ 142,92
-                                  <i
-                                    class="bi bi-plus-circle ms-3 text-danger fw-bold"
-                                  ></i>
+                                  <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
                                 </li>
                                 <li class="d-flex">
                                   <strong class="flex-grow-1">Total do Pedido: </strong>R$
@@ -2016,6 +1929,92 @@
                                   <strong class="flex-grow-1">% RO: </strong>6,72%
                                 </li>
                               </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo"
+                          >
+                            Local de Estoque DF
+                          </button>
+                        </h2>
+                        <div
+                          id="panelsStayOpen-collapseTwo"
+                          class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingTwo"
+                        >
+                          <div class="accordion-body">
+                            <div class="accordion-body">
+                              <div class="row gap-3">
+                                <ul class="col-md-6">
+                                  <li class="d-flex text-start">
+                                    <strong class="flex-grow-1">Total dos Produtos: </strong
+                                    >R$ 6.225,29
+                                  </li>
+                                  <li class="d-flex text-start">
+                                    <strong class="flex-grow-1">Juros: </strong>R$ 118,87
+                                    <i
+                                      class="bi bi-dash-circle ms-3 text-success fw-bold"
+                                    ></i>
+                                  </li>
+                                  <li class="d-flex">
+                                    <strong class="flex-grow-1">Descontos: </strong>R$ 60,00
+                                    <i
+                                      class="bi bi-plus-circle ms-3 text-danger fw-bold"
+                                    ></i>
+                                  </li>
+                                  <li class="d-flex">
+                                    <strong class="flex-grow-1"
+                                      >Total com Descontos/Juros: </strong
+                                    >R$ 6.284,16 <i class="ms-3 fw-bold">=</i>
+                                  </li>
+                                  <li class="d-flex">
+                                    <strong class="flex-grow-1">ICMS/ST: </strong>R$ 628,40
+                                    <i
+                                      class="bi bi-plus-circle ms-3 text-danger fw-bold"
+                                    ></i>
+                                  </li>
+                                  <li class="d-flex">
+                                    <strong class="flex-grow-1">IPI: </strong>R$ 49,63
+                                    <i
+                                      class="bi bi-plus-circle ms-3 text-danger fw-bold"
+                                    ></i>
+                                  </li>
+                                  <li class="d-flex">
+                                    <strong class="flex-grow-1">Desoneração: </strong>R$
+                                    1.292,53
+                                    <i
+                                      class="bi bi-dash-circle ms-3 text-success fw-bold"
+                                    ></i>
+                                  </li>
+                                  <li class="d-flex">
+                                    <strong class="flex-grow-1">Frete: </strong>R$ 142,92
+                                    <i
+                                      class="bi bi-plus-circle ms-3 text-danger fw-bold"
+                                    ></i>
+                                  </li>
+                                  <li class="d-flex">
+                                    <strong class="flex-grow-1">Total do Pedido: </strong>R$
+                                    5.812,58 <i class="ms-3 fw-bold">=</i>
+                                  </li>
+                                </ul>
+                                <ul class="col-md-5">
+                                  <li class="d-flex">
+                                    <strong class="flex-grow-1">Valor RO: </strong>R$ 335,63
+                                  </li>
+                                  <li class="d-flex">
+                                    <strong class="flex-grow-1">% RO: </strong>6,72%
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -2679,8 +2678,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-5">
-            <p class="footer-data">Limite disponível (cliente): R$ 51.500,00</p>
-            <p class="footer-data">Limite disponível (agrupamento) : R$ 65.100,00</p>
+            <p class="footer-data">Limite disponível (cliente): R$ 51.500,00 <br/>
+            Limite disponível (agrupamento) : R$ 65.100,00</p>
           </div>
           <div class="col">
             <button type="button" class="btn btn-warning text-light">Novo/Limpar</button>
