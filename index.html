@@ -601,6 +601,26 @@
       
                   </tbody>
                 </table>
+                <!-- Busca por item-->
+                <div class="row d-flex align-items-end">
+                  <div class="d-grid d-flex gap-2 align-items-end">
+                    <div class="col-md-6 me-3">
+                      <div class="form-group mb-0">
+                        <label for="codigo">Busca por item:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="codigo"
+                          placeholder="Digite aqui o código ou descrição do item."
+                        />
+                      </div>
+                    </div>
+                    <button class="btn btn-success text-light" type="button">
+                      Pesquisar
+                  </div>
+                </div>
+                <!---->
+                <div class="mt-4"></div>
                 <!--Grid-->
                 <table class="table table-striped table-hover">
                   <thead>
@@ -608,7 +628,6 @@
                       <th class="border-end" cope="col"></th>
                       <th class="border-end" scope="col">Data</th>
                       <th class="border-end" scope="col">Item</th>
-                      <th class="border-end" scope="col">Descrição do Item</th>
                       <th class="border-end" scope="col">Quantidade</th>
                       <th class="border-end" scope="col">Vlr unit. pago</th>
                       <th class="border-end" scope="col">Local</th>
@@ -620,8 +639,7 @@
                         <input type="checkbox" />
                       </th>
                       <td class="border-end">18/05/2021</td>
-                      <td class="border-end">212866</td>
-                      <td class="border-end">CEL. SAMS A11 64GB PRETO ZF</td>
+                      <td class="border-end">CEL. SAMS A11 64GB PRETO ZF <br>212866</td>
                       <td class="border-end">1</td>
                       <td class="border-end">R$ 550,00</td>
                       <td class="border-end">0001-74</td>
@@ -631,8 +649,7 @@
                         <input type="checkbox" />
                       </th>
                       <td class="border-end">18/05/2021</td>
-                      <td class="border-end">212868</td>
-                      <td class="border-end">CEL. SAMS A12 64GB VERMELHO ZF</td>
+                      <td class="border-end">CEL. SAMS A12 64GB VERMELHO ZF<br>212868</td>
                       <td class="border-end">2</td>
                       <td class="border-end">R$ 420,00</td>
                       <td class="border-end">0001-74</td>
@@ -642,8 +659,7 @@
                         <input type="checkbox" />
                       </th>
                       <td class="border-end">18/05/2021</td>
-                      <td class="border-end">212829</td>
-                      <td class="border-end">CEL. SAMS A12 64GB AZUL ZF</td>
+                      <td class="border-end">CEL. SAMS A12 64GB AZUL ZF<br>212829</td>
                       <td class="border-end">5</td>
                       <td class="border-end">R$ 510,00</td>
                       <td class="border-end">0001-74</td>
@@ -653,10 +669,7 @@
                         <input type="checkbox" />
                       </th>
                       <td class="border-end">15/04/2021</td>
-                      <td class="border-end">217857</td>
-                      <td class="border-end">
-                        CARTAO DE MEM. VOIA MICRSO SD 32GB
-                      </td>
+                      <td class="border-end">CARTAO DE MEM. VOIA MICRSO SD 32GB<br>217857</td>
                       <td class="border-end">2</td>
                       <td class="border-end">R$ 80,00</td>
                       <td class="border-end">0001-74</td>
@@ -666,8 +679,7 @@
                         <input type="checkbox" />
                       </th>
                       <td class="border-end">15/04/2021</td>
-                      <td class="border-end">212857</td>
-                      <td class="border-end">CARREADOR SAMSSUNG TA20B TIPO C</td>
+                      <td class="border-end">CARREGADOR SAMSSUNG TA20B TIPO C<br>212857</td>
                       <td class="border-end">2</td>
                       <td class="border-end">R$ 90,00</td>
                       <td class="border-end">0001-74</td>
@@ -677,8 +689,7 @@
                         <input type="checkbox" />
                       </th>
                       <td class="border-end">15/04/2021</td>
-                      <td class="border-end">212135</td>
-                      <td class="border-end">CEL. MOTOROLA E7 64GB COBRE</td>
+                      <td class="border-end">CEL. MOTOROLA E7 64GB COBRE<br>212135</td>
                       <td class="border-end">3</td>
                       <td class="border-end">R$ 950,00</td>
                       <td class="border-end">0001-74</td>
@@ -688,8 +699,7 @@
                         <input type="checkbox" />
                       </th>
                       <td class="border-end">15/04/2021</td>
-                      <td class="border-end">212857</td>
-                      <td class="border-end">CEL. LG K41S 32GB PTO 4G</td>
+                      <td class="border-end">CEL. LG K41S 32GB PTO 4G<br>212857</td>
                       <td class="border-end">2</td>
                       <td class="border-end">R$ 730,00</td>
                       <td class="border-end">0001-74</td>
@@ -709,9 +719,9 @@
                 <!-- Definir Plano de Pagamento e Qtdade de Parcelas -->
                 <div class="row">
                   <!-- Botão "Adicionar itens" -->
-                  <div class="col-md-3 d-flex align-items-center">  
+                  <!--div class="col-md-3 d-flex align-items-center">  
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Adicionar itens</button>
-                  </div>
+                  </div-->
                   <div class="col-md-3">
                     <div class="form-group">
                       <label class="form-label font-md" for="fatura">Fatura de Pagamento:</label>
@@ -737,9 +747,9 @@
                           aria-label="Recipient's username"
                           aria-describedby="button-addon2"
                         >
-                          <option value="plano1">A Vista</option>
-                          <option value="plano2">DT Boleto c/15 dias</option>
-                          <option value="plano3">DT Boleto c/20 dias</option>
+                          <option value="plano1">A Vista - 1x</option>
+                          <option value="plano2">Cartão de crédito - 1x </option>
+                          <option value="plano3">Cartão de crédito - 2x</option>
                         </select>
                         <button
                           class="btn btn-outline-secondary"
@@ -888,7 +898,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-2">
+                  <!--div class="col-md-2">
                     <div class="form-group">
                       <label class="form-label font-md" for="qtdParcela"
                         >Qtd Parcela:</label
@@ -899,16 +909,45 @@
                         <option value="qtdParcela3">4</option>
                       </select>
                     </div>
+                  </div-->
+                </div>
+                <div class="row">
+                  <!--div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label font-md" for="adicaoRapida">Adição rápida de item:</label>
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="adicaoRapida">
+                        <button type="button" class="btn btn-primary">
+                          <i class="bi bi-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div-->
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="form-label font-md" for="adicaoRapida">Adição rápida de item:</label>
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="adicaoRapida">
+                        <button type="button" class="btn btn-primary">
+                          <i class="bi bi-cart-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-flex align-items-center">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Adicionar itens</button>
                   </div>
                 </div>
+                
                 <!-- Tabela principal -->
                 <div class="table-responsive">
                   <table class="table table-striped font-md">
                     <thead>
                       <tr>
+                        <th></th>
+                        <th></th>
                         <th>Seq</th>
                         <th>Item</th>
-                        <th>Descrição do Item</th>
                         <th>Qtd</th>
                         <th>Qtd Estoque</th>
                         <th>Preço R$</th>
@@ -932,15 +971,22 @@
                         <th>PIS %</th>
                         <th>COFINS %</th>
                         <th>IPI %</th>
-                        <th></th>
-                        <th></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
+                        <!-- Coluna de Ações com o ícone de lixeira -->
+                        <td>
+                          <button class="btn btn-link" type="button"><i class="bi bi-trash-fill"></i></button>
+                        </td>
+                        <!-- Coluna de Ações com o ícone de informação-->
+                        <td>
+                          <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="bi bi-gift-fill"></i></button>
+                          <br>
+                          <button class="btn btn-link" type="button"><i class="bi bi-info-circle-fill"></i></button>
+                        </td>
                         <td>001</td>
-                        <td>2581</td>
-                        <td>Smartphone XYZ</td>
+                        <td>Smartphone XYZ<br>2581</td>
                         <td>
                           <div class="input-group mb-1">
                             <input
@@ -1023,23 +1069,45 @@
                         <td>1,65%</td>
                         <td>7,60%</td>
                         <td>0,00%</td>
-                        <!-- Coluna de Ações com o ícone de informação -->
-                        <td>
-                          <button class="btn btn-link" type="button">
-                            <i class="bi bi-info-circle-fill"></i>
-                          </button>
-                        </td>
-                         <!-- Coluna de Ações com o ícone de lixeira -->
-                        <td>
-                          <button class="btn btn-link" type="button">
-                            <i class="bi bi-trash-fill"></i>
-                          </button>
+                      </tr>
+                      <!-- área do brinde-->
+                      <tr class="collapse" id="collapseExample">
+                        <td colspan="3">
+                          <!-- Conteúdo expandido da linha -->
+                          <div class="row">
+                            <div class="col">
+                              <!-- Coluna 1 do conteúdo expandido -->
+                              <div class="input-group mb-3">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox">
+                                </div>
+                                <td>Capa de celular<br>4593</td>
+                                <!-- Conteúdo da coluna 1 -->
+                              </div>
+                            </div>
+                            <div class="col">
+                              <!-- Coluna 2 do conteúdo expandido -->
+                              <div class="input-group mb-3">
+                                <td>Qtd:2<br>Custo: R$ 10,30</td>
+                                <!-- Conteúdo da coluna 2 -->
+                              </div>
+                            </div>
+                            <!-- Restante das colunas do conteúdo expandido -->
+                          </div>
                         </td>
                       </tr>
                       <tr>
+                      <tr>
+                        <!-- Coluna de Ações com o ícone de lixeira -->
+                        <td>
+                              <button class="btn btn-link" type="button"><i class="bi bi-trash-fill"></i></button>
+                        </td>
+                          <!-- Coluna de Ações com o ícone de informação-->
+                        <td>
+                              <button class="btn btn-link" type="button"><i class="bi bi-info-circle-fill"></i></button>
+                        </td>  
                         <td>002</td>
-                        <td>8523</td>
-                        <td>Fone de Ouvido ABC</td>
+                        <td>Fone de Ouvido ABC<br>8523</td>
                         <td>
                           <div class="input-group mb-1">
                             <input
@@ -1050,12 +1118,14 @@
                         </td>
                         <td>10</td>
                         <td>
-                          <div class="input-group mb-1">
+                          <div class="input-group mb-2">
                             <input
                               type="text"
                               class="form-control"
                               value="R$ 50,00"/>
                           </div>
+                          <button class="btn btn-link" type="button"><i class="bi bi-currency-dollar"></i></button>
+                          <button class="btn btn-link" type="button"><i class="bi bi-bar-chart-line"></i></button>
                         </td>
                         <td>
                           <div class="input-group mb-1">
@@ -1122,22 +1192,19 @@
                         <td>1,65%</td>
                         <td>7,60%</td>
                         <td>0,00%</td>
-                        <!-- Coluna de Ações com o ícone de informação -->
-                        <td>
-                          <button class="btn btn-link" type="button"><i class="bi bi-info-circle-fill"></i>
-                          </button>
-                         </td>
-                        <!-- Coluna de Ações com o ícone de lixeira -->
-                        <td>
-                            <button class="btn btn-link" type="button">
-                                <i class="bi bi-trash-fill"></i>
-                            </button>
-                        </td>
                       </tr>
                       <tr>
+                      <tr>
+                        <!-- Coluna de Ações com o ícone de lixeira -->
+                        <td>
+                              <button class="btn btn-link" type="button"><i class="bi bi-trash-fill"></i></button>
+                        </td>
+                          <!-- Coluna de Ações com o ícone de informação-->
+                        <td>
+                              <button class="btn btn-link" type="button"><i class="bi bi-info-circle-fill"></i></button>
+                        </td>  
                         <td>003</td>
-                        <td>8596</td>
-                        <td>Carregador USB</td>
+                        <td>Carregador USB<br>8596</td>
                         <td>
                           <div class="input-group mb-1">
                             <input
@@ -1220,22 +1287,18 @@
                         <td>1,65%</td>
                         <td>7,60%</td>
                         <td>0,00%</td>
-                        <!-- Coluna de Ações com o ícone de informação -->
-                        <td>
-                          <button class="btn btn-link" type="button"><i class="bi bi-info-circle-fill"></i>
-                          </button>
-                        </td>
-                        <!-- Coluna de Ações com o ícone de lixeira -->
-                        <td>
-                          <button class="btn btn-link" type="button">
-                            <i class="bi bi-trash-fill"></i>
-                          </button>
-                        </td>
                       </tr>
                       <tr>
+                        <!-- Coluna de Ações com o ícone de lixeira -->
+                        <td>
+                          <button class="btn btn-link" type="button"><i class="bi bi-trash-fill"></i></button>
+                        </td>
+                        <!-- Coluna de Ações com o ícone de informação-->
+                        <td>
+                          <button class="btn btn-link" type="button"><i class="bi bi-info-circle-fill"></i></button>
+                        </td>  
                         <td>004</td>
-                        <td>7584</td>
-                        <td>Capa para Celular</td>
+                        <td>Capa para Celular<br>7584</td>
                         <td>
                           <div class="input-group mb-1">
                             <input
@@ -1320,17 +1383,6 @@
                         <td>1,65%</td>
                         <td>7,60%</td>
                         <td>0,00%</td>
-                        <!-- Coluna de Ações com o ícone de informação -->
-                        <td>
-                          <button class="btn btn-link" type="button"><i class="bi bi-info-circle-fill"></i>
-                           </button>
-                        </td>
-                        <!-- Coluna de Ações com o ícone de lixeira -->
-                        <td>
-                           <button class="btn btn-link" type="button">
-                               <i class="bi bi-trash-fill"></i>
-                           </button>
-                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -1786,6 +1838,8 @@
                             <button class="btn btn-success text-light" type="button">
                               Pesquisar
                             </button>
+                            <button class="btn btn-primary" type="button">Recomendação
+                            </button>
                           </div>
                         </div>
                         <!--div class="row">
@@ -1817,9 +1871,8 @@
                                 <label class="font-md">Pesquise Itens:</label>
                                   <select class="form-select form-select-sm me-2 mb-2" aria-label=".form-select-sm example" id="pesquisaItem">
                                     <option selected disabled>Selecione uma opção</option>
-                                    <option value="pesquisaItem1">Recomendados</option>
-                                    <option value="pesquisaItem2">Em promoção</option>
-                                    <option value="pesquisaItem3">Com brindes</option>
+                                    <option value="pesquisaItem1">Em promoção</option>
+                                    <option value="pesquisaItem2">Com brindes</option>
                                   </select>
                               </div>
                             </div>
@@ -1989,7 +2042,7 @@
                                 </select>
                               </td>
                               <td>
-                                <select class="form-select" id="faturamento">
+                                <select class="form-select" id="faturamento" disabled>
                                   <option value="faturamento1" selected>Imediato</option>
                                   <!-- Restante das opções -->
                                 </select>
@@ -2028,7 +2081,7 @@
                               <td>
                                 <select class="form-select" id="faturamento">
                                   <option value="faturamento1" selected>Imediato</option>
-                                  <option value="faturamento2">8542 (10/04/2023 à 23/08/2023)</option>
+                                  <option value="faturamento2">10/04/2023 à 23/08/2023(8542)</option>
                                   <!-- Restante das opções -->
                                 </select>
                               </td>
@@ -2066,7 +2119,7 @@
                               <td>
                                 <select class="form-select" id="faturamento">
                                   <option value="faturamento1">Imediato</option>
-                                  <option value="faturamento2" selected>1234 (12/09/2023 à 15/11/2023)</option>
+                                  <option value="faturamento2" selected>12/09/2023 à 15/11/2023(1234)</option>
                                   <!-- Restante das opções -->
                                 </select>
                               </td>
