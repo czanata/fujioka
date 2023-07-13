@@ -539,8 +539,6 @@
                             <tr>
                               <!--th class="border-end" cope="col"></th-->
                               <th class="border-end" scope="col">Cliente</th>
-                              <th class="border-end" scope="col">Código</th>
-                              <th class="border-end" scope="col">Nome do cliente</th>
                               <th class="border-end" scope="col">Restrito</th>
                               <th class="border-end" scope="col">Limite Crédito R$</th>
                               <th class="border-end" scope="col">Valor Débito R$</th>
@@ -549,9 +547,7 @@
                           <tbody>
                             <tr>
                               <!--th class="border-end" scope="row"></th-->
-                              <td class="border-end">35.341.425/0001-49</td>
-                              <td class="border-end">419828</td>
-                              <td class="border-end">Juliano Pereira</td>
+                              <td class="border-end">35.341.425/0001-49 - Juliano Pereira Ltda - 419828</td>
                               <td class="text-center align-middle">
                                 <input type="checkbox" checked />
                               </td>
@@ -1212,8 +1208,10 @@
                               class="form-control"
                               value="3"/>
                           </div>
+                          <button class="btn btn-link" type="button"><i class="bi bi-zoom-in"></i></button>
                         </td>
-                        <td>36</td>
+                        <td>36
+                        </td>
                         <td>
                           <div class="input-group mb-1">
                             <input
@@ -1579,6 +1577,7 @@
                                   <option value="2">Destinatário</option>
                                   <option value="3">Sem frete</option>
                                 </select>
+                                <button class="btn btn-dark" type="button">Calcular Frete</button>
                               </div>
                             </div>
                             <div class="col-md-12">
@@ -1629,8 +1628,8 @@
                               <input type="text" class="form-control" />
                             </div>
                             <div class="col-md-3">
-                              <label class="form-label font-md">Novo Frete</label>
-                              <input type="text" class="form-control" />
+                              <label class="form-label font-md">Novo Frete R$</label>
+                              <input type="text" class="form-control" disabled/>
                             </div>
                             <div class="col-md-12">
                               <div class="input-group">
@@ -1642,9 +1641,10 @@
                                   <option selected disabled>
                                     Selecione uma opção
                                   </option>
-                                  <option value="1">Motivo 01</option>
-                                  <option value="2">Motivo 02</option>
-                                  <option value="3">Motivo 03</option>
+                                  <option value="1">Acordo comercial – Solução de Pós Vendas</option>
+                                  <option value="2">Acordo comercial – Solução pendência financeira</option>
+                                  <option value="3">Aging</option>
+                                  <option value="4">Pedido fracionado em dois CD’s</option>
                                 </select>
                               </div>
                             </div>
@@ -1712,6 +1712,7 @@
                                     <option value="2">Destinatário</option>
                                     <option value="3">Sem frete</option>
                                   </select>
+                                  <button class="btn btn-dark" type="button">Calcular Frete</button>
                                 </div>
                               </div>
                               <div class="col-md-12">
@@ -1750,7 +1751,7 @@
                                   <strong>Tipo de Transporte:</strong> 99 dias
                                 </li>
                                 <li class="col">
-                                  <strong>Tipo de Entrega:</strong> 99 dias
+                                  <strong>Tipo de Entrega:</strong>De segunda à sexta-feira
                                 </li>
                               </ul>
                               <div class="col-md-4">
@@ -1763,7 +1764,7 @@
                               </div>
                               <div class="col-md-3">
                                 <label class="form-label font-md">Novo Frete</label>
-                                <input type="text" class="form-control" />
+                                <input type="text" class="form-control" disabled/>
                               </div>
                               <div class="col-md-12">
                                 <div class="input-group">
@@ -1775,9 +1776,10 @@
                                     <option selected disabled>
                                       Selecione uma opção
                                     </option>
-                                    <option value="1">Motivo 01</option>
-                                    <option value="2">Motivo 02</option>
-                                    <option value="3">Motivo 03</option>
+                                    <option value="1">Acordo comercial – Solução de Pós Vendas</option>
+                                    <option value="2">Acordo comercial – Solução pendência financeira</option>
+                                    <option value="3">Aging</option>
+                                    <option value="4">Pedido fracionado em dois CD’s</option>
                                   </select>
                                 </div>
                               </div>
@@ -2313,6 +2315,11 @@
                         </div>
                       </div>
                     </div>
+                    <br>
+                    <div class="d-flex">
+                      <strong class="flex-grow-1">TOTAL GERAL: </strong>R$ 11.625,16<i class="ms-3 fw-bold"></i>
+                    </div>
+                    </td>
                   </div>
                 </div>
                 <!--fim totais-->
