@@ -677,7 +677,7 @@
                           aria-describedby="button-addon2"
                         >
                           <option value="plano1">A Vista - 1x</option>
-                          <option value="plano2">Cartão de crédito - 1x </option>
+                          <option value="plano2">Cartão de crédito - 1x - 1,20%</option>
                           <option value="plano3">Cartão de crédito - 2x</option>
                         </select>
                         <button
@@ -1142,7 +1142,6 @@
                               value="3"/>
                           </div>
                           <button class="btn btn-link" type="button"><i class="bi bi-zoom-in"></i></button>
-                          <button class="btn btn-link" type="button"><i class="bi bi-facebook text-danger"></i></button>
                         </td>
                         <td>36
                         </td>
@@ -1153,6 +1152,7 @@
                               class="form-control"
                               value="R$ 20,00"/>
                           </div>
+                          <button class="btn btn-link" type="button"><i class="bi bi-facebook text-danger"></i></button>
                         </td>
                         <td>
                           <div class="input-group mb-1">
@@ -2079,7 +2079,95 @@
               <div class="tab-pane fade" id="totalResumo">
                 <!-- Campos da aba de Totais -->
                 <!--totais-->
-                <div class="d-flex justify-content-center">
+                <div class="d-flex flex-column justify-content-center">
+                                     
+                  <div class="row gap-3">
+                    <ul class="col-md-6">
+                      <h5>TOTAL GERAL</h5>
+                      
+                      <div class="row gap-6">
+                        <div class="col-12">
+                            <li class="">
+                                <strong class="flex-grow-1"><CLIENTE:> </strong>52.263.125-0001/99 - Cliente XPTO (CONTRIBUINTE) (CONSUMO)
+                              </li>  
+                        </div>
+                        <div class="col-8">
+                            <li class="d-flex text-start">
+                                <strong class="flex-grow-1">Total dos Itens: </strong>R$ 6.225,29
+                              </li>
+                              <li class="d-flex">
+                                <strong class="flex-grow-1">Juros: </strong>R$ 118,87
+                                <i class="bi bi-dash-circle ms-3 text-success fw-bold"></i>
+                              </li>
+                        </div>
+                            <div class="col-4">
+                                <li class="d-flex text-start">
+                                  <strong class="flex-grow-1">Valor RO: </strong>R$ 335,63
+                                </li>
+                                <li class="d-flex">
+                                  <strong class="flex-grow-1">% RO: </strong>6,72%
+                                </li>
+                            </div>
+                        </div>
+                      <div class="col-8">  
+                      <!--li class="d-flex text-start">
+                        <strong class="flex-grow-1">Total dos Itens: </strong
+                        >R$ 6.225,29
+                      </li>
+                      <li class="d-flex text-start">
+                        <strong class="flex-grow-1">Juros: </strong>R$ 118,87
+                        <i
+                          class="bi bi-dash-circle ms-3 text-success fw-bold"
+                        ></i>
+                      </li-->
+                      <li class="d-flex">
+                        <strong class="flex-grow-1">Descontos: </strong>R$ 60,00
+                        <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
+                      </li>
+                      <li class="d-flex">
+                        <strong class="flex-grow-1"
+                          >Total com Descontos/Juros: </strong
+                        >R$ 6.284,16 <i class="ms-3 fw-bold">=</i>
+                      </li>
+                      <li class="d-flex">
+                        <strong class="flex-grow-1">ICMS/ST: </strong>R$ 628,40
+                        <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
+                      </li>
+                      <li class="d-flex">
+                        <strong class="flex-grow-1">IPI: </strong>R$ 49,63
+                        <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
+                      </li>
+                      <li class="d-flex">
+                        <strong class="flex-grow-1">Desoneração: </strong>R$
+                        1.292,53
+                        <i
+                          class="bi bi-dash-circle ms-3 text-success fw-bold"
+                        ></i>
+                      </li>
+                      <li class="d-flex">
+                        <strong class="flex-grow-1">Frete: </strong>R$ 142,92
+                        <i class="bi bi-plus-circle ms-3 text-danger fw-bold"></i>
+                      </li>
+                      <li class="d-flex">
+                        <strong class="flex-grow-1">Total do Pedido: </strong>R$
+                        5.812,58 <i class="ms-3 fw-bold">=</i>
+                      </li>
+                      </div>
+                    </ul>
+                    <!--ul class="col-md-5">
+                        <div class="row gap-6">
+                            <li class="d-flex">
+                                <strong class="flex-grow-1">Valor RO: </strong>R$ 335,63
+                            </li>
+                            <li class="d-flex">
+                                <strong class="flex-grow-1">% RO: </strong>6,72%
+                            </li>
+                        </div>
+                    </ul-->
+                  </div>
+
+                  
+                  <!--Acorddion-->
                   <div class="row w-75 mb-18">
                     <h5>Total por Entrega</h5>
                     <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -2245,10 +2333,6 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <br>
-                    <div class="d-flex">
-                      <strong class="flex-grow-1">TOTAL GERAL: </strong>R$ 11.625,16<i class="ms-3 fw-bold"></i>
                     </div>
                     </td>
                   </div>
