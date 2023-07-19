@@ -530,10 +530,10 @@
                   <tbody>
                     <tr>
                       <td class="text-center">
-                        Histórico de Compras por Item
+                        Histórico de Compras por Categoria
                       </td>
                       <td class="text-center">
-                        Histórico de Compras por Categoria
+                        Histórico de Compras por Item
                       </td>
                     </tr>
                     <tr>
@@ -579,7 +579,7 @@
                       <th class="border-end" scope="col">Data</th>
                       <th class="border-end" scope="col">Item</th>
                       <th class="border-end" scope="col">Quantidade</th>
-                      <th class="border-end" scope="col">Vlr unit. pago</th>
+                      <th class="border-end" scope="col">Vlr unit. R$(sem ST)</th>
                       <th class="border-end" scope="col">Local</th>
                     </tr>
                   </thead>
@@ -1373,14 +1373,14 @@
                       <div class="d-flex modal-footer">
                         <button
                           type="button"
-                          class="btn btn-secondary"
+                          class="btn btn-warning text-light"
                           data-dismiss="modal"
                         >
                           Cancelar
                         </button>
                         <button
                           type="button"
-                          class="btn btn-primary"
+                          class="btn btn-success"
                           data-dismiss="modal"
                         >
                           Ok
@@ -1437,14 +1437,14 @@
                       <div class="d-flex modal-footer">
                         <button
                           type="button"
-                          class="btn btn-secondary"
+                          class="btn btn-warning text-light"
                           data-dismiss="modal"
                         >
                           Cancelar
                         </button>
                         <button
                           type="button"
-                          class="btn btn-primary"
+                          class="btn btn-success"
                           data-dismiss="modal"
                         >
                           Ok
@@ -1482,6 +1482,25 @@
                             <div class="col-md-12">
                               <div class="input-group">
                                 <span class="input-group-text font-md"
+                                  >Tipo de Frete</span
+                                >
+                                <select
+                                  class="form-select form-select-sm"
+                                  aria-label=".form-select-sm example"
+                                >
+                                  <option value="1" selected>Emitente</option>
+                                  <option value="2">Destinatário</option>
+                                  <option value="3">Sem frete</option>
+                                </select>
+                                <button class="btn btn-dark" type="button">Calcular Frete</button>
+                                <span class="input-group-text font-md font-weight-bold text-success"
+                                  >FRETE GRÁTIS</span
+                                >
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="input-group">
+                                <span class="input-group-text font-md"
                                   >Itens</span
                                 >
                                 <select
@@ -1498,69 +1517,45 @@
                                 </select>
                               </div>
                             </div>
-                            <div class="col-md-12">
-                              <div class="input-group">
-                                <span class="input-group-text font-md"
-                                  >Tipo de Frete</span
-                                >
-                                <select
-                                  class="form-select form-select-sm"
-                                  aria-label=".form-select-sm example"
-                                >
-                                  <option value="1" selected>Emitente</option>
-                                  <option value="2">Destinatário</option>
-                                  <option value="3">Sem frete</option>
-                                </select>
-                                <button class="btn btn-dark" type="button">Calcular Frete</button>
-                              </div>
-                            </div>
-                            <div class="col-md-12">
-                              <div class="input-group">
-                                <span class="input-group-text font-md">Frete</span>
-                                <select
-                                  class="form-select form-select-sm"
-                                  aria-label=".form-select-sm example"
-                                >
-                                  <option selected value="1">
-                                    52.378.678/0001-00 - Transportadora 01 - R$
-                                    0,00
-                                  </option>
-                                  <option value="1">
-                                    68.345.258/0001-00 - Transportadora 02 - R$
-                                    2.563,56 - 3,52%
-                                  </option>
-                                  <option value="1">
-                                    15.945.813/0002-00 - Transportadora 03 - R$
-                                    9.863,56
-                                  </option>
-                                  <option value="1">
-                                    82.247.948/0001-00 - Transportadora 04 - R$
-                                    70,00
-                                  </option>
-                                </select>
-                              </div>
-                            </div>
-                            <ul class="row row-cols-2">
-                              <li class="col"><strong>Prazo:</strong> 99 dias</li>
-                              <li class="col"><strong>% Frete:</strong> 3,52%</li>
-                              <li class="col">
-                                <strong>Tipo de Transporte:</strong> 99 dias
-                              </li>
-                              <li class="col">
-                                <strong>Tipo de Entrega:</strong> 99 dias
-                              </li>
-                            </ul>
-                            <div class="col-md-4">
-                              <label class="form-label font-md">Desconto %</label>
+
+                            <div class="col-md-3">
+                              <label class="form-label font-md">% Frete</label>
                               <input type="text" class="form-control" />
                             </div>
                             <div class="col-md-4">
                               <label class="form-label font-md">Desconto R$</label>
                               <input type="text" class="form-control" />
                             </div>
-                            <div class="col-md-3">
-                              <label class="form-label font-md">Novo Frete R$</label>
-                              <input type="text" class="form-control" disabled/>
+                            <div class="col-md-4">
+                              <label class="form-label font-md">Frete R$</label>
+
+                                <div class="input-group mb-3">
+                                  <input
+                                    type="text"
+                                    class="form-control" disabled
+                                    aria-label="Recipient's username"
+                                    aria-describedby="button-addon2"
+                                    value=""
+                                  />
+                                  <button
+                                    class="btn btn-outline-secondary btn-sm"
+                                    type="button"
+                                    id="button-addon2"
+                                    data-toggle="modal"
+                                    data-target="#modalDetalheTransporte"
+                                    title="Ver detalhes de transporte."
+                                  >
+                                    <i class="bi bi-truck"></i>
+                                  </button>
+                                </div>
+                                <!--
+                                -->
+          
+                                <!--
+                                -->
+                              
+                                
+                              
                             </div>
                             <div class="col-md-12">
                               <div class="input-group">
@@ -1694,7 +1689,7 @@
                                 <input type="text" class="form-control" />
                               </div>
                               <div class="col-md-3">
-                                <label class="form-label font-md">Novo Frete</label>
+                                <label class="form-label font-md">Frete</label>
                                 <input type="text" class="form-control" disabled/>
                               </div>
                               <div class="col-md-12">
@@ -2074,6 +2069,106 @@
                   </div>
                 </div>
                 </div>
+
+                <div
+                  class="modal fade"
+                  id="modalDetalheTransporte"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="modalDetalheTransporte"
+                >
+                  <div
+                    class="modal-dialog modal-lg modal-dialog-centered"
+                    role="document"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel">
+                          Detalhe Transporte
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+
+                      <div class="d-flex flex-column gap-3 modal-body">
+                        <div class="input-group">
+                          <span class="input-group-text font-md">Frete</span>
+                          <select
+                            class="form-select form-select-sm"
+                            aria-label=".form-select-sm example"
+                          >
+                            <option value="1" selected>
+                              52.378.678/0001-00 - Transportadora 01 - R$
+                              5.763,56
+                            </option>
+                            <option value="1">
+                              68.345.258/0001-00 - Transportadora 02 - R$
+                              2.563,56
+                            </option>
+                            <option value="1">
+                              15.945.813/0002-00 - Transportadora 03 - R$
+                              9.863,56
+                            </option>
+                            <option value="1">
+                              82.247.948/0001-00 - Transportadora 04 - R$
+                              6.363,56
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <ul class="row row-cols-2">
+                        <li class="col"><strong>Prazo:</strong> 99 dias</li>
+                        <li class="col"><strong>% Frete:</strong> 99,99%</li>
+                        <li class="col">
+                          <strong>Tipo de Transporte:</strong> 99 dias
+                        </li>
+                        <li class="col">
+                          <strong>Tipo de Entrega:</strong>De segunda à sexta-feira
+                        </li>
+                      </ul>
+                      <div class="d-flex flex-column gap-3 modal-body">
+                        <div class="input-group">
+                          <span class="input-group-text font-md">Motivo</span>
+                          <select
+                            class="form-select form-select-sm"
+                            aria-label=".form-select-sm example"
+                          >
+                            <option selected disabled>
+                              Selecione uma opção
+                            </option>
+                            <option value="1">Acordo comercial – Solução de Pós Vendas</option>
+                            <option value="2">Acordo comercial – Solução pendência financeira</option>
+                            <option value="3">Aging</option>
+                            <option value="4">Pedido fracionado em dois CD’s</option>
+                          </select>
+                        </div>
+                      </div>
+
+
+                      <div class="d-flex modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-warning text-light"
+                          data-dismiss="modal"
+                        >
+                          Cancelar
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-success"
+                          data-dismiss="modal"
+                        >
+                          Ok
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
               <!-- TOTAL RESUMO-->
               <div class="tab-pane fade" id="totalResumo">
@@ -2088,7 +2183,12 @@
                       <div class="row gap-6">
                         <div class="col-12">
                             <li class="">
-                                <strong class="flex-grow-1"><CLIENTE:> </strong>52.263.125-0001/99 - Cliente XPTO (CONTRIBUINTE) (CONSUMO)
+                                <strong class="flex-grow-1"><CLIENTE:> </strong>52.263.125-0001/99 - Cliente XPTO (CONTRIBUINTE)
+                              </li>  
+                        </div>
+                        <div class="col-12">
+                            <li class="">
+                                <strong class="flex-grow-1"><CLIENTE:> </strong>Venda para : CONSUMO
                               </li>  
                         </div>
                         <div class="col-8">
@@ -2181,7 +2281,7 @@
                             aria-expanded="false"
                             aria-controls="panelsStayOpen-collapseOne"
                           >
-                            Local de Estoque GO
+                            Local de Estoque GO - Transportadora Abc
                           </button>
                         </h2>
                         <div
@@ -2242,6 +2342,12 @@
                                 <li class="d-flex">
                                   <strong class="flex-grow-1">% RO: </strong>6,72%
                                 </li>
+                                <li class="d-flex">
+                                  <strong class="flex-grow-1">Valor RO com VPC: </strong>R$ 335,63
+                                </li>
+                                <li class="d-flex">
+                                  <strong class="flex-grow-1">% RO com VPC: </strong>6,72%
+                                </li>
                               </ul>
                             </div>
                           </div>
@@ -2257,7 +2363,7 @@
                             aria-expanded="false"
                             aria-controls="panelsStayOpen-collapseTwo"
                           >
-                            Local de Estoque DF
+                            Local de Estoque DF - Transportadora XYZ
                           </button>
                         </h2>
                         <div
