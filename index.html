@@ -337,6 +337,15 @@
                     </div>
                     <!-- outros campos da aba de Identificação -->
                   </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label class="form-label font-md" for="numero"
+                        >Número:</label
+                      >
+                      <input type="text" class="form-control" id="numero" disabled/>
+                    </div>
+                    <!-- outros campos da aba de Identificação -->
+                  </div>
                   <div class="col-md-5">
                     <div class="form-group">
                       <label class="form-label font-md" for="complementoInput"
@@ -350,12 +359,12 @@
                     </div>
                     <!-- outros campos da aba de Identificação -->
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-4">
                     <div class="form-group">
-                      <label class="form-label font-md" for="numero"
-                        >Número:</label
+                      <label class="form-label font-md" for="bairro"
+                        >Bairro:</label
                       >
-                      <input type="text" class="form-control" id="numero" disabled/>
+                      <input type="text" class="form-control" id="bairro" disabled />
                     </div>
                     <!-- outros campos da aba de Identificação -->
                   </div>
@@ -365,15 +374,6 @@
                         >Cidade/UF:</label
                       >
                       <input type="text" class="form-control" id="cidade-uf" disabled/>
-                    </div>
-                    <!-- outros campos da aba de Identificação -->
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="form-label font-md" for="bairro"
-                        >Bairro:</label
-                      >
-                      <input type="text" class="form-control" id="bairro" disabled />
                     </div>
                     <!-- outros campos da aba de Identificação -->
                   </div>
@@ -403,39 +403,6 @@
                     <!-- outros campos da aba de Identificação -->
                   </div>
       
-                  <div class="col-md-4">
-                    <!--div class="form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="optante-simples"
-                      />
-                      <label
-                        class="form-check-label font-md"
-                        for="optante-simples"
-                        >Optante Simples Nacional?</label
-                      >
-                    </div-->
-                    <!-- outros campos da aba de Identificação -->
-                  </div>
-                  <div class="col-md-4">
-                    <!--div class="form-group">
-                      <label class="form-label font-md" for="tipo-venda"
-                        >Tipo de Venda:</label
-                      >
-                      <input type="text" class="form-control" id="tipo-venda" />
-                    </div-->
-                    <!-- outros campos da aba de Identificação -->
-                  </div>
-                  <div class="col-md-4">
-                    <!--div class="form-group">
-                      <label class="form-label font-md" for="ligacao"
-                        >Ligação:</label
-                      >
-                      <input type="text" class="form-control" id="ligacao" />
-                    </div-->
-                    <!-- outros campos da aba de Identificação -->
-                  </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
@@ -497,6 +464,7 @@
                               <th class="border-end" scope="col">Restrito</th>
                               <th class="border-end" scope="col">Limite Crédito R$</th>
                               <th class="border-end" scope="col">Valor Débito R$</th>
+                              <!--th class="border-end" scope="col">Limite Disponível R$</th-->
                             </tr>
                           </thead>
                           <tbody>
@@ -506,12 +474,19 @@
                               <td class="text-center align-middle">
                                 <input type="checkbox" checked />
                               </td>
-                              <td class="border-end">R$ 105.000,00</td>
-                              <td class="border-end">R$ 104,251,32</td>
+                              <td class="border-end">R$ 105.000,32</td>
+                              <td class="border-end">R$ 104.251,32</td>
+                              <!--td class="border-end">R$ 749,00</td-->
                             </tr>
+
+                            <!--tr>
+                              <td class="border-end" colspan="2"><strong>TOTAL</strong></td>
+                              <td class="border-end"><strong id="totalLimiteCredito">R$ 105.000,32</strong></td>
+                              <td class="border-end"><strong id="totalValorDebito">R$ 104.251,32</strong></td>
+                              <td class="border-end"><strong id="totalLimiteDisponivel">R$ 749,00</strong></td>
+                            </tr-->
                           </tbody>
                         </table>
-
                         <!-- Campos da aba de Agrupamento -->
                       </div>
                     </div>
@@ -580,77 +555,67 @@
                       <th class="border-end" scope="col">Item</th>
                       <th class="border-end" scope="col">Quantidade</th>
                       <th class="border-end" scope="col">Vlr unit. R$(sem ST)</th>
-                      <th class="border-end" scope="col">Local</th>
+                      <th class="border-end" scope="col">Local de Estoque</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td class="border-end">18/05/2021</td>
-                      <td class="border-end">CEL. SAMS A11 64GB PRETO ZF <br>212866</td>
+                      <td class="border-end">212866<br>CEL. SAMS A11 64GB PRETO ZF</td>
                       <td class="border-end">1</td>
                       <td class="border-end">R$ 550,00</td>
                       <td class="border-end">0001-74</td>
                     </tr>
                     <tr>
                       <td class="border-end">18/05/2021</td>
-                      <td class="border-end">CEL. SAMS A12 64GB VERMELHO ZF<br>212868</td>
+                      <td class="border-end">242868<br>CEL. SAMS A12 64GB VERMELHO ZF</td>
                       <td class="border-end">2</td>
                       <td class="border-end">R$ 420,00</td>
                       <td class="border-end">0001-74</td>
                     </tr>
                     <tr>
                       <td class="border-end">18/05/2021</td>
-                      <td class="border-end">CEL. SAMS A12 64GB AZUL ZF<br>212829</td>
+                      <td class="border-end">212829<br>CEL. SAMS A12 64GB AZUL ZF</td>
                       <td class="border-end">5</td>
                       <td class="border-end">R$ 510,00</td>
                       <td class="border-end">0001-74</td>
                     </tr>
                     <tr>
                       <td class="border-end">15/04/2021</td>
-                      <td class="border-end">CARTAO DE MEM. VOIA MICRSO SD 32GB<br>217857</td>
+                      <td class="border-end">217857<br>CARTAO DE MEM. VOIA MICRSO SD 32GB</td>
                       <td class="border-end">2</td>
                       <td class="border-end">R$ 80,00</td>
                       <td class="border-end">0001-74</td>
                     </tr>
                     <tr>
                       <td class="border-end">15/04/2021</td>
-                      <td class="border-end">CARREGADOR SAMSSUNG TA20B TIPO C<br>212857</td>
+                      <td class="border-end">212857<br>CARREGADOR SAMSSUNG TA20B TIPO C</td>
                       <td class="border-end">2</td>
                       <td class="border-end">R$ 90,00</td>
                       <td class="border-end">0001-74</td>
                     </tr>
                     <tr>
                       <td class="border-end">15/04/2021</td>
-                      <td class="border-end">CEL. MOTOROLA E7 64GB COBRE<br>212135</td>
+                      <td class="border-end">212135<br>CEL. MOTOROLA E7 64GB COBRE</td>
                       <td class="border-end">3</td>
                       <td class="border-end">R$ 950,00</td>
                       <td class="border-end">0001-74</td>
                     </tr>
                     <tr>
                       <td class="border-end">15/04/2021</td>
-                      <td class="border-end">CEL. LG K41S 32GB PTO 4G<br>212857</td>
+                      <td class="border-end">212857<br>CEL. LG K41S 32GB PTO 4G</td>
                       <td class="border-end">2</td>
                       <td class="border-end">R$ 730,00</td>
                       <td class="border-end">0001-74</td>
                     </tr>
                   </tbody>
                 </table>
-                <!-- <div>
-                  <img
-                    src="C:\Users\C5366084\Downloads\MicrosoftTeams-image.png"
-                    alt="gráficos"
-                  />
-                </div> -->
               </div>
               <div class="tab-pane fade" id="itens">
                 <h4></h4>
                 <!-- Campos da aba de ITENS -->
                 <!-- Definir Plano de Pagamento e Qtdade de Parcelas -->
                 <div class="row">
-                  <!-- Botão "Adicionar itens" -->
-                  <!--div class="col-md-3 d-flex align-items-center">  
-                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Adicionar itens</button>
-                  </div-->
                   <div class="col-md-3">
                     <div class="form-group">
                       <label class="form-label font-md" for="fatura">Fatura de Pagamento:</label>
@@ -813,11 +778,11 @@
                                 </table>
                               </div>
                               <div class="modal-footer">
+                                <button type="button" class="btn btn-warning text-light" data-bs-dismiss="modal">
+                                    Cancelar
+                                  </button>
                                 <button type="button" class="btn btn-success">
-                                  Selecionar
-                                </button>
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                                  Sair
+                                  Ok
                                 </button>
                               </div>
                             </div>
@@ -887,13 +852,13 @@
                         <th>Valor Total</th>
                         <th>RO</th>
                         <th>Repasse</th>
-                        <th>CFOP</th>
                         <th>Desoneração</th>
                         <th>ICMS %</th>
+                        <th>IPI %</th>
                         <th>IVA %</th>
                         <th>PIS %</th>
                         <th>COFINS %</th>
-                        <th>IPI %</th>
+                        <th>CFOP</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -983,7 +948,6 @@
                             </button>
                           </div>
                         </td>
-                        <td>6404-1</td>
                         <td>R$ 0,00<br>
                         R$ 0,00</td>
                         <td>12,00%</td>
@@ -991,6 +955,7 @@
                         <td>1,65%</td>
                         <td>7,60%</td>
                         <td>0,00%</td>
+                        <td>6404-1</td>
                       </tr>
                       <!-- área do brinde-->
                       <tr class="collapse" id="collapseExample">
@@ -1104,7 +1069,6 @@
                             </button>
                           </div>
                         </td>
-                        <td>6404-1</td>
                         <td>R$ 0,00<br>
                         R$ 0,00</td>
                         <td>12,00%</td>
@@ -1112,6 +1076,7 @@
                         <td>1,65%</td>
                         <td>7,60%</td>
                         <td>0,00%</td>
+                        <td>6404-1</td>
                       </tr>
                       <tr>
                       <tr>
@@ -1201,7 +1166,6 @@
                             </button>
                           </div>
                         </td>
-                        <td>6404-1</td>
                         <td>R$ 0,00<br>
                         R$ 0,00</td>
                         <td>12,00%</td>
@@ -1209,6 +1173,7 @@
                         <td>1,65%</td>
                         <td>7,60%</td>
                         <td>0,00%</td>
+                        <td>6404-1</td>
                       </tr>
                       <tr>
                         <!-- Coluna de Ações com o ícone de lixeira -->
@@ -1296,7 +1261,6 @@
                             </button>
                           </div>
                         </td>
-                        <td>6404-1</td>
                         <td>R$ 0,00<br>
                         R$ 0,00</td>
                         <td>12,00%</td>
@@ -1304,6 +1268,7 @@
                         <td>1,65%</td>
                         <td>7,60%</td>
                         <td>0,00%</td>
+                        <td>6404-1</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1916,7 +1881,6 @@
                             <tr>
                               <th class="border-end" cope="col"></th>
                               <th>Item</th>
-                              <th>Descrição do Item</th>
                               <th>Qtd </th>
                               <th>Qtd Estoque</th>
                               <th>Preço Venda</th>
@@ -1934,8 +1898,7 @@
                               <th class="border-end" scope="row">
                                 <input type="checkbox" />
                               </th>      
-                              <td>2581</td>
-                              <td>Smartphone XYZ</td>
+                              <td>2581<br>Smartphone XYZ</td>
                               <td>
                                 <div class="row">
                                   <div class="col-md-1">
@@ -1971,8 +1934,7 @@
                               <th class="border-end" scope="row">
                                 <input type="checkbox" />
                               </th>      
-                              <td>8523</td>
-                              <td>Fone de Ouvido ABC</td>
+                              <td>8523<br>Fone de Ouvido ABC</td>
                               <td>
                                 <div class="row">
                                   <div class="col-md-1">
@@ -2009,8 +1971,7 @@
                               <th class="border-end" scope="row">
                                 <input type="checkbox" />
                               </th>      
-                              <td>8596</td>
-                              <td>Carregador USB</td>
+                              <td>8596<br>Carregador USB</td>
                               <td>
                                 <div class="row">
                                   <div class="col-md-1">
@@ -2047,9 +2008,6 @@
                         </table>
                       </div>
                       <div class="d-flex modal-footer">
-                        <!--div class="d-flex gap-2 flex-grow-1">
-                          <button type="button" class="btn btn-outline-danger fw-bold">Preço</button>
-                        </div-->
                         <button type="button" class="btn btn-warning text-light">Novo Filtro</button>
                         <button type="button" class="btn btn-success" data-dismiss="modal">Adicionar</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Sair</button>
