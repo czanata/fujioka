@@ -3,126 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAP UI5 Style</title>
+  <title>Página com Abas</title>
+  <!-- Adicionando o Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-
-    header {
-      background-color: #007acc;
-      color: #fff;
-      padding: 10px;
-      text-align: right;
-    }
-
-    nav {
-      width: 250px;
-      background-color: #f8f8f8;
-      height: 100vh;
-      position: fixed;
-      left: 0;
-      top: 0;
-      overflow-y: auto;
-      padding-top: 60px;
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-    nav a {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      color: #333;
-    }
-
-    nav a:hover {
-      background-color: #ddd;
-    }
-
-    .content {
-      margin-left: 250px;
-      padding: 20px;
-    }
-
+    /* Adicione estilos personalizados aqui, se necessário */
     .tab-content {
-      display: none;
-    }
-
-    .active {
-      display: block;
-    }
-
-    /* SAP UI5 Style */
-    .sapUiTextField {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .sapUiTimeline {
-      width: 100%;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <span>Minha Conta</span> | <span>Logout</span>
-  </header>
 
-  <nav>
-    <a href="#" onclick="openTab('DadosCliente')">Dados do Cliente</a>
-    <a href="#" onclick="openTab('Proposta')">Proposta</a>
-    <a href="#" onclick="openTab('Contrato')">Contrato</a>
-  </nav>
+<div class="container">
+  <ul class="nav nav-tabs" id="myTabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="dados-tab" data-toggle="tab" href="#dados">Dados do Cliente</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="proposta-tab" data-toggle="tab" href="#proposta">Proposta</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contrato-tab" data-toggle="tab" href="#contrato">Contrato</a>
+    </li>
+  </ul>
 
-  <div class="content">
-    <div id="DadosCliente" class="tab-content active">
-      <label for="nome">Nome:</label>
-      <input class="sapUiTextField" type="text" id="nome">
-
-      <label for="sobrenome">Sobrenome:</label>
-      <input class="sapUiTextField" type="text" id="sobrenome">
-
-      <!-- Adicione os outros campos conforme necessário -->
-
-      <h3>Linha do Tempo</h3>
-      <div class="sapUiTimeline">
-        <!-- Adicione a linha do tempo aqui -->
-      </div>
+  <div class="tab-content">
+    <!-- Aba Dados do Cliente -->
+    <div class="tab-pane fade show active" id="dados">
+      <form>
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" id="nome">
+        </div>
+        <div class="form-group">
+          <label for="sobrenome">Sobrenome:</label>
+          <input type="text" class="form-control" id="sobrenome">
+        </div>
+        <div class="form-group">
+          <label for="cpfCnpj">CPF/CNPJ:</label>
+          <input type="text" class="form-control" id="cpfCnpj">
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" class="form-control" id="telefone">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="descricao">Descrição:</label>
+          <textarea class="form-control" id="descricao"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="situacao">Situação:</label>
+          <input type="text" class="form-control" id="situacao">
+        </div>
+        <div class="form-group">
+          <label for="responsavel">Responsável pelo cadastro:</label>
+          <input type="text" class="form-control" id="responsavel">
+        </div>
+      </form>
     </div>
 
-    <div id="Proposta" class="tab-content">
-      <label for="dataProposta">Data:</label>
-      <input class="sapUiTextField" type="date" id="dataProposta">
-
-      <label for="uploadProposta">Upload do Arquivo da Proposta:</label>
-      <input class="sapUiTextField" type="file" id="uploadProposta">
-
-      <h3>Linha do Tempo</h3>
-      <div class="sapUiTimeline">
-        <!-- Adicione a linha do tempo aqui -->
-      </div>
+    <!-- Aba Proposta -->
+    <div class="tab-pane fade" id="proposta">
+      <form>
+        <div class="form-group">
+          <label for="dataProposta">Data:</label>
+          <input type="date" class="form-control" id="dataProposta">
+        </div>
+        <div class="form-group">
+          <label for="uploadProposta">Upload do Arquivo da Proposta:</label>
+          <input type="file" class="form-control-file" id="uploadProposta">
+        </div>
+        <div class="form-group">
+          <label for="fasesProposta">Fases:</label>
+          <ul class="list-group">
+            <li class="list-group-item">Elaboração</li>
+            <li class="list-group-item">Validação</li>
+            <li class="list-group-item">Aceite</li>
+          </ul>
+        </div>
+      </form>
     </div>
 
-    <div id="Contrato" class="tab-content">
-      <!-- Campos semelhantes aos de Proposta -->
+    <!-- Aba Contrato -->
+    <div class="tab-pane fade" id="contrato">
+      <form>
+        <div class="form-group">
+            <label for="dataProposta">Data:</label>
+            <input type="date" class="form-control" id="dataProposta">
+          </div>
+          <div class="form-group">
+            <label for="uploadProposta">Upload do Arquivo da Proposta:</label>
+            <input type="file" class="form-control-file" id="uploadProposta">
+          </div>
+          <div class="form-group">
+            <label for="fasesProposta">Fases:</label>
+            <ul class="list-group">
+              <li class="list-group-item">Elaboração</li>
+              <li class="list-group-item">Validação</li>
+              <li class="list-group-item">Aceite</li>
+            </ul>
+          </div>
+      </form>
     </div>
   </div>
+</div>
 
-  <script>
-    function openTab(tabId) {
-      // Esconde todas as abas
-      var tabs = document.getElementsByClassName('tab-content');
-      for (var i = 0; i < tabs.length; i++) {
-        tabs[i].classList.remove('active');
-      }
+<!-- Adicionando o Bootstrap JS e jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-      // Mostra a aba selecionada
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
 </body>
 </html>
