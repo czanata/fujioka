@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa Jurídica</title>
+  <!-- Adicionando o Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Pesquisa Jurídica</h2>
+
+  <form class="form-inline mb-3">
+    <div class="form-group mr-2">
+      <label for="inputCaso" class="sr-only">Caso:</label>
+      <input type="text" class="form-control" id="inputCaso" placeholder="Caso">
+    </div>
+    <div class="form-group mr-2">
+      <label for="inputProcesso" class="sr-only">Processo:</label>
+      <input type="text" class="form-control" id="inputProcesso" placeholder="Processo">
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+  </form>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Caso</th>
+        <th scope="col">Processo</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Advogado</th>
+        <th scope="col">Data Entrada</th>
+        <th scope="col">Detalhes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>123</td>
+        <td>456789</td>
+        <td>Cliente A</td>
+        <td>Advogado 1</td>
+        <td>2023-01-10</td>
+        <td><button type="button" class="btn btn-info">Detalhes</button></td>
+      </tr>
+      <tr>
+        <td>456</td>
+        <td>789012</td>
+        <td>Cliente B</td>
+        <td>Advogado 2</td>
+        <td>2023-02-15</td>
+        <td><button type="button" class="btn btn-info">Detalhes</button></td>
+      </tr>
+      <tr>
+        <td>789</td>
+        <td>012345</td>
+        <td>Cliente C</td>
+        <td>Advogado 3</td>
+        <td>2023-03-20</td>
+        <td><button type="button" class="btn btn-info">Detalhes</button></td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>112233</td>
+        <td>Cliente D</td>
+        <td>Advogado 4</td>
+        <td>2023-04-25</td>
+        <td><button type="button" class="btn btn-info">Detalhes</button></td>
+      </tr>
+      <tr>
+        <td>202</td>
+        <td>334455</td>
+        <td>Cliente E</td>
+        <td>Advogado 5</td>
+        <td>2023-05-30</td>
+        <td><button type="button" class="btn btn-info">Detalhes</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Adicionando o Bootstrap JS e jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
