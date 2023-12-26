@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página com Abas</title>
+  <!-- Adicionando o Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .tab-content {
+      margin-top: 20px;
+    }
+
+    .timeline {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .timeline-item {
+      margin-bottom: 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #007acc;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <ul class="nav nav-tabs" id="myTabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="dados-tab" data-toggle="tab" href="#dados">Dados do Cliente</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="proposta-tab" data-toggle="tab" href="#proposta">Proposta</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contrato-tab" data-toggle="tab" href="#contrato">Contrato</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <!-- Aba Dados do Cliente -->
+    <div class="tab-pane fade show active" id="dados">
+      <form>
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" id="nome">
+        </div>
+        <div class="form-group">
+          <label for="sobrenome">Sobrenome:</label>
+          <input type="text" class="form-control" id="sobrenome">
+        </div>
+        <div class="form-group">
+          <label for="cpfCnpj">CPF/CNPJ:</label>
+          <input type="text" class="form-control" id="cpfCnpj">
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" class="form-control" id="telefone">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="descricao">Descrição:</label>
+          <textarea class="form-control" id="descricao"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="situacao">Situação:</label>
+          <input type="text" class="form-control" id="situacao">
+        </div>
+        <div class="form-group">
+          <label for="responsavel">Responsável pelo cadastro:</label>
+          <input type="text" class="form-control" id="responsavel">
+        </div>
+      </form>
+    </div>
+
+    <!-- Aba Proposta -->
+    <div class="tab-pane fade" id="proposta">
+      <form>
+        <div class="form-group">
+          <label for="dataProposta">Data:</label>
+          <input type="date" class="form-control" id="dataProposta">
+        </div>
+        <div class="form-group">
+          <label for="uploadProposta">Upload do Arquivo da Proposta:</label>
+          <input type="file" class="form-control-file" id="uploadProposta">
+        </div>
+        <h5>Linha do Tempo - Proposta</h5>
+        <ul class="timeline">
+          <li class="timeline-item">Elaboração - 01/01/2023</li>
+          <li class="timeline-item">Validação - 05/01/2023</li>
+          <li class="timeline-item">Aceite - 10/01/2023</li>
+          <!-- Adicione mais passos conforme necessário -->
+        </ul>
+      </form>
+    </div>
+
+    <!-- Aba Contrato -->
+    <div class="tab-pane fade" id="contrato">
+      <form>
+        <div class="form-group">
+          <label for="dataContrato">Data:</label>
+          <input type="date" class="form-control" id="dataContrato">
+        </div>
+        <div class="form-group">
+          <label for="uploadContrato">Upload do Arquivo do Contrato:</label>
+          <input type="file" class="form-control-file" id="uploadContrato">
+        </div>
+        <h5>Linha do Tempo - Contrato</h5>
+        <ul class="timeline">
+          <li class="timeline-item">Elaboração - 01/02/2023</li>
+          <li class="timeline-item">Validação - 07/02/2023</li>
+          <li class="timeline-item">Assinatura - 15/02/2023</li>
+          <!-- Adicione mais passos conforme necessário -->
+        </ul>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<!-- Adicionando o Bootstrap JS e jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
