@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Tarefas</title>
+  <!-- Adicionando o Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .btn-container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+  <h2 class="mb-4">Tarefa</h2>
+  <form>
+    <div class="form-group">
+      <label for="fase">Fase:</label>
+      <select class="form-control" id="fase" name="fase">
+        <option value="elaboracao">Elaboração</option>
+        <option value="validacao">Validação</option>
+        <option value="fechamento">Fechamento</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="dataConclusao">Data de Conclusão:</label>
+      <input type="date" class="form-control" id="dataConclusao" name="dataConclusao">
+    </div>
+    <div class="form-group">
+      <label for="atribuirPara">Atribuir para:</label>
+      <input type="text" class="form-control" id="atribuirPara" name="atribuirPara">
+    </div>
+    <div class="form-group">
+      <label for="descricao">Descrição:</label>
+      <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="aprovado">Aprovado:</label>
+      <select class="form-control" id="aprovado" name="aprovado">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+    </div>
+    <div class="btn-container">
+      <button type="button" class="btn btn-primary">Salvar</button>
+      <button type="button" class="btn btn-secondary">Cancelar</button>
+    </div>
+  </form>
+</div>
+
+<!-- Adicionando o Bootstrap JS e jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
