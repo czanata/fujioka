@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela Jurídica</title>
+  <!-- Adicionando o Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .table th, .table td {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4">
+  <ul class="nav nav-tabs" id="myTabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="detalhe-tab" data-toggle="tab" href="#detalhe">Detalhe</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="andamentos-tab" data-toggle="tab" href="#andamentos">Andamentos</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <!-- Aba Detalhe -->
+    <div class="tab-pane fade show active" id="detalhe">
+      <h2 class="my-4">Detalhes do Caso</h2>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="cliente">Cliente:</label>
+            <input type="text" class="form-control" id="cliente" name="cliente" value="Cliente ABC">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="escritorio">Escritório:</label>
+            <input type="text" class="form-control" id="escritorio" name="escritorio" value="Escritório XYZ">
+          </div>
+          <!-- Adicione os demais campos conforme necessário... -->
+        </div>
+
+        <div class="btn-container">
+          <button type="button" class="btn btn-primary">Salvar</button>
+          <button type="button" class="btn btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Aba Andamentos -->
+    <div class="tab-pane fade" id="andamentos">
+      <h2 class="my-4">Andamentos do Caso</h2>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="dataAndamento">Data:</label>
+            <input type="date" class="form-control" id="dataAndamento" name="dataAndamento">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="usuarioInclusao">Usuário Inclusão:</label>
+            <input type="text" class="form-control" id="usuarioInclusao" name="usuarioInclusao" value="João Silva">
+          </div>
+          <!-- Adicione os demais campos conforme necessário... -->
+        </div>
+
+        <!-- Tabela de Andamentos -->
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Anexos</th>
+              <th>Data Andamento</th>
+              <th>Ato Processual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas da tabela de Andamentos -->
+            <tr>
+              <td>Sim</td>
+              <td>2023-01-10</td>
+              <td>Publicação de Sentença</td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+          </tbody>
+        </table>
+
+        <!-- Tabela de Followups -->
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Anexos</th>
+              <th>Tipo</th>
+              <th>Responsável</th>
+              <th>Data Followup</th>
+              <th>Hora</th>
+              <th>Status</th>
+              <th>Data Status</th>
+              <th>Usuário Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas da tabela de Followups -->
+            <tr>
+              <td>Sim</td>
+              <td>Reunião</td>
+              <td>Maria Souza</td>
+              <td>2023-01-15</td>
+              <td>14:30</td>
+              <td>Concluído</td>
+              <td>2023-01-16</td>
+              <td>João Silva</td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+          </tbody>
+        </table>
+
+        <div class="btn-container">
+          <button type="button" class="btn btn-primary">Salvar</button>
+          <button type="button" class="btn btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Adicionando o Bootstrap JS e jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
