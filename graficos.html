@@ -34,68 +34,63 @@
 
   <div class="row">
     <div class="col-md-6">
-      <h4 class="chart-title">Status</h4>
-      <canvas id="statusChart" width="400" height="300"></canvas>
+      <h4 class="chart-title">Processos</h4>
+      <canvas id="processosChart" width="400" height="300"></canvas>
     </div>
     <div class="col-md-6">
-      <h4 class="chart-title">Fase</h4>
-      <canvas id="faseChart" width="400" height="300"></canvas>
-    </div>
-  </div>
-
-  <div class="row mt-4">
-    <div class="col-md-6">
-      <h4 class="chart-title">Natureza</h4>
-      <canvas id="naturezaChart" width="400" height="300"></canvas>
-    </div>
-    <div class="col-md-6">
-      <h4 class="chart-title">Advogado</h4>
-      <canvas id="advogadoChart" width="400" height="300"></canvas>
+      <h4 class="chart-title">Contagem de Casos por Advogado</h4>
+      <canvas id="advogadosChart" width="400" height="300"></canvas>
     </div>
   </div>
 </div>
 
 <script>
-  // Dados de exemplo
-  var data = {
-    labels: ["Concluído", "Em andamento", "Pendente"],
+  // Dados de exemplo para o gráfico de pizza
+  var dadosProcessos = {
+    labels: ["Aberto", "Em andamento", "Encerrado"],
     datasets: [{
-      data: [30, 50, 20],
-      backgroundColor: ["#36a2eb", "#ff6384", "#ffce56"]
+      data: [20, 50, 30],
+      backgroundColor: ["#ff6384", "#36a2eb", "#ffce56"]
     }]
   };
 
-  var options = {
+  var opcoesProcessos = {
     responsive: true,
     maintainAspectRatio: false
   };
 
-  // Status Chart
-  var statusChart = new Chart(document.getElementById("statusChart"), {
+  // Dados de exemplo para o gráfico de barras
+  var dadosAdvogados = {
+    labels: ["Advogado 1", "Advogado 2", "Advogado 3", "Advogado 4", "Advogado 5"],
+    datasets: [{
+      label: "Contagem de Casos",
+      data: [10, 15, 20, 25, 30],
+      backgroundColor: ["#36a2eb", "#ff6384", "#36a2eb", "#ff6384", "#36a2eb"]
+    }]
+  };
+
+  var opcoesAdvogados = {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  };
+
+  // Processos Chart
+  var processosChart = new Chart(document.getElementById("processosChart"), {
     type: 'pie',
-    data: data,
-    options: options
+    data: dadosProcessos,
+    options: opcoesProcessos
   });
 
-  // Fase Chart
-  var faseChart = new Chart(document.getElementById("faseChart"), {
-    type: 'pie',
-    data: data,
-    options: options
-  });
-
-  // Natureza Chart
-  var naturezaChart = new Chart(document.getElementById("naturezaChart"), {
-    type: 'pie',
-    data: data,
-    options: options
-  });
-
-  // Advogado Chart
-  var advogadoChart = new Chart(document.getElementById("advogadoChart"), {
-    type: 'pie',
-    data: data,
-    options: options
+  // Advogados Chart
+  var advogadosChart = new Chart(document.getElementById("advogadosChart"), {
+    type: 'bar',
+    data: dadosAdvogados,
+    options: opcoesAdvogados
   });
 </script>
 
