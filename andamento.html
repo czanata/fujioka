@@ -208,16 +208,38 @@
       <h2 class="my-4">Andamentos do Caso</h2>
       <form>
         <div class="form-row">
-          <div class="form-group col-md-3">
-            <label for="dataAndamento">Data:</label>
-            <input type="date" class="form-control" id="dataAndamento" name="dataAndamento">
+            <div class="form-group col-md-4">
+              <label for="dataAndamento">Data:</label>
+              <input type="date" class="form-control" id="dataAndamento" name="dataAndamento" value="2023-01-10">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="usuarioInclusao">Usuário Inclusão:</label>
+              <input type="text" class="form-control" id="usuarioInclusao" name="usuarioInclusao" value="João Silva">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="usuarioAlteracao">Usuário Alteração:</label>
+              <input type="text" class="form-control" id="usuarioAlteracao" name="usuarioAlteracao" value="Maria Souza">
+            </div>
           </div>
-          <div class="form-group col-md-3">
-            <label for="usuarioInclusao">Usuário Inclusão:</label>
-            <input type="text" class="form-control" id="usuarioInclusao" name="usuarioInclusao" value="João Silva">
+      
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="status">Status:</label>
+              <select class="form-control" id="status" name="status">
+                <option value="Em andamento" selected>Em andamento</option>
+                <option value="Concluído">Concluído</option>
+                <option value="Pendente">Pendente</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="atoProcessual">Ato Processual:</label>
+              <input type="text" class="form-control" id="atoProcessual" name="atoProcessual" value="Publicação de Sentença">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="descricaoAndamento">Descrição do Andamento:</label>
+              <textarea class="form-control" id="descricaoAndamento" name="descricaoAndamento" rows="3">Andamento do processo...</textarea>
+            </div>
           </div>
-          <!-- Adicione os demais campos conforme necessário... -->
-        </div>
 
         <!-- Tabela de Andamentos -->
         <table class="table table-bordered">
