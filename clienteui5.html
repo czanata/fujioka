@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Cliente - Escritório de Advocacia</title>
+  <script id="sap-ui-bootstrap"
+    src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_fiori_3"
+    data-sap-ui-libs="sap.m"
+    data-sap-ui-compatVersion="edge"
+    data-sap-ui-resourceroots='{"sap.ui.demo.wt": "./"}'>
+  </script>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .form-field {
+      margin-bottom: 15px;
+    }
+
+    .form-field label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .button-container {
+      text-align: center;
+    }
+
+    .button-container .sapMBtn {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body class="sapUiBody">
+  <div class="container" id="content">
+    <div class="title">Cadastro de Cliente - Escritório de Advocacia</div>
+    <div class="form-field">
+      <label for="nameInput">Nome:</label>
+      <input id="nameInput" type="text">
+    </div>
+    <div class="form-field">
+      <label for="emailInput">Email:</label>
+      <input id="emailInput" type="email">
+    </div>
+    <div class="form-field">
+      <label for="phoneInput">Telefone:</label>
+      <input id="phoneInput" type="tel">
+    </div>
+    <div class="button-container">
+      <button id="saveButton" class="sapMBtn sapMBtnBase">Salvar</button>
+      <button id="cancelButton" class="sapMBtn sapMBtnTransparent">Cancelar</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("saveButton").addEventListener("click", function() {
+      var name = document.getElementById("nameInput").value;
+      var email = document.getElementById("emailInput").value;
+      var phone = document.getElementById("phoneInput").value;
+
+      alert("Cliente cadastrado com sucesso:\nNome: " + name + "\nEmail: " + email + "\nTelefone: " + phone);
+    });
+
+    document.getElementById("cancelButton").addEventListener("click", function() {
+      document.getElementById("nameInput").value = "";
+      document.getElementById("emailInput").value = "";
+      document.getElementById("phoneInput").value = "";
+    });
+  </script>
+</body>
+</html>
