@@ -22,10 +22,12 @@
             color: #333;
         }
     </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <h1>Leitor de catálogo Altenburg</h1>
-    <button id="start-button">Ler Código de barras</button>
+    <!--button id="start-button">Ler Código de barras</button-->
+    <button class="btn" id="start-button"><i class="fa fa-bars"></i> Ler código</button>
     <video id="video" autoplay></video>
     <p id="output">Valor dos Códigos de Barras lidos: <textarea id="barcode-result" rows="4" cols="50"></textarea></p>
 
@@ -45,7 +47,7 @@
                             target: video    // Or '#yourElement' (optional)
                         },
                         decoder: {
-                            readers: ["code_128_reader","ean_reader","ean_8_reader","qr_code"] // lista de leitores, pode incluir mais tipos como "ean_reader", "ean_8_reader", etc.
+                            readers: ["code_128_reader","ean_reader","ean_8_reader"] // lista de leitores, pode incluir mais tipos como "ean_reader", "ean_8_reader", etc.
                         }
                     }, function(err) {
                         if (err) {
