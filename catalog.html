@@ -1,28 +1,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
     <link href="https://institucional.altenburg.com.br/catalog/2024/css/estilo.css?694" rel="stylesheet" type="text/css">
     <title>Catalogo Altenburg 2024</title>
-    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-66JZL6VFZQ&amp;cx=c&amp;_slc=1"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-66JZL6VFZQ&amp;cx=c&amp;_slc=1"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="https://gist.github.com/alexermakov/b16df3e89e935e0ad4f6.js"></script>
     
-    <script type="text/javascript">
-    
-        function sessao(){
-            // lista de contatos
-            if(!$('#busca-chat').val()){
-                $.ajax({ // voltei para a função, pois ao usar direto, "pisca" a janela com as msgs
-                    url: 'session.php',
-                    type: 'GET',
-                    cache: false,
-                    success: function(data){
-                        setTimeout('sessao()', 10000);
-                    },
-                    timeout: 5000,
-                    error:   function(){ 
-                        setTimeout('sessao()', 10000);
-                    },
-                })
-            }
-        }
-    </script>
     <script>
         // Evento para abrir o modal de preço
         $('#btn-preco').on('click', function() {
