@@ -45,7 +45,7 @@
                             target: video    // Or '#yourElement' (optional)
                         },
                         decoder: {
-                            readers: ["code_128_reader"] // lista de leitores, pode incluir mais tipos como "ean_reader", "ean_8_reader", etc.
+                            readers: ["code_128_reader","ean_reader"] // lista de leitores, pode incluir mais tipos como "ean_reader", "ean_8_reader", etc.
                         }
                     }, function(err) {
                         if (err) {
@@ -56,7 +56,7 @@
                     });
 
                     Quagga.onDetected(function(data) {
-                        document.getElementById('barcode-result').textContent = data.codeResult.code;
+                        document.getElementById('barcode-result').textContent = data.codeResult.code + ',';
                         Quagga.stop();
                         video.srcObject.getTracks().forEach(track => track.stop());
                     });
