@@ -96,6 +96,64 @@
             color: #999;
         }
 
+        /* Estilo do botão "Adicionar ao Carrinho" */
+        .add-to-cart-btn {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #003060;
+        }
+
+        /* Estilos da Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #eaeaea;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .modal-content input {
+            width: 50px;
+            padding: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .close-btn {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #cc0000;
+        }
+
         footer {
             background-color: #004080;
             color: white;
@@ -135,6 +193,7 @@
                 <p class="product-description">Conforto e durabilidade com molas ensacadas individualmente.</p>
                 <p class="product-price">R$ 1.899,90</p>
                 <p class="product-stock">Disponível: 10 unidades</p>
+                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
 
             <!-- Produto 2 -->
@@ -144,6 +203,7 @@
                 <p class="product-description">Macio, ergonômico, ideal para o suporte corporal.</p>
                 <p class="product-price">R$ 1.099,90</p>
                 <p class="product-stock">Disponível: 15 unidades</p>
+                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
         </div>
 
@@ -156,6 +216,7 @@
                 <p class="product-description">Jogo de lençol 100% algodão, conforto para suas noites.</p>
                 <p class="product-price">R$ 249,90</p>
                 <p class="product-stock">Disponível: 25 unidades</p>
+                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
 
             <!-- Produto 4 -->
@@ -165,6 +226,7 @@
                 <p class="product-description">Aconchegante, com toque de algodão e preenchimento macio.</p>
                 <p class="product-price">R$ 499,90</p>
                 <p class="product-stock">Disponível: 12 unidades</p>
+                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
         </div>
 
@@ -177,6 +239,7 @@
                 <p class="product-description">Perfeito para quem busca um travesseiro com maior firmeza.</p>
                 <p class="product-price">R$ 89,90</p>
                 <p class="product-stock">Disponível: 30 unidades</p>
+                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
 
             <!-- Produto 6 -->
@@ -186,7 +249,20 @@
                 <p class="product-description">Ergonômico, adapta-se ao contorno da cabeça e pescoço.</p>
                 <p class="product-price">R$ 199,90</p>
                 <p class="product-stock">Disponível: 20 unidades</p>
+                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <h3>Adicionar ao Carrinho</h3>
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <br>
+            <button class="add-to-cart-btn" onclick="closeModal()">Adicionar</button>
+            <button class="close-btn" onclick="closeModal()">Fechar</button>
         </div>
     </div>
 
@@ -194,6 +270,25 @@
     <footer>
         <p>&copy; 2024 Altenburg. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- JavaScript para abrir e fechar a modal -->
+    <script>
+        function openModal() {
+            document.getElementById("cartModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("cartModal").style.display = "none";
+        }
+
+        // Fechar a modal se o usuário clicar fora dela
+        window.onclick = function(event) {
+            var modal = document.getElementById("cartModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
