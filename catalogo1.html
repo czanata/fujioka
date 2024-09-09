@@ -45,12 +45,22 @@
             padding: 20px 0;
         }
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        h2 {
+            margin-top: 40px;
+            font-size: 24px;
+            color: #004080;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
             gap: 20px;
-            justify-items: center;
-            margin-top: 20px;
+            padding: 10px 0;
+            scroll-behavior: smooth;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
         }
 
         .product-item {
@@ -177,53 +187,50 @@
 
     <!-- Navegação -->
     <nav>
-        <a href="#colchoes">Colchões</a>
-        <a href="#roupas-de-cama">Roupas de Cama</a>
-        <a href="#almofadas">Almofadas</a>
-        <a href="#promoções">Promoções</a>
+        <a href="#blend-luxo">Blend Luxo</a>
+        <a href="#algodao-lux">Algodão Lux</a>
+        <a href="#travesseiros">Travesseiros</a>
+        <a href="#toque-acetinado">Toque Acetinado</a>
     </nav>
 
-    <!-- Catálogo de Produtos -->
+    <!-- Conteúdo principal -->
     <div class="container">
-        <h2 id="colchoes">Colchões</h2>
-        <div class="products-grid">
-            <!-- Produto 1 -->
-            <div class="product-item">
-                <img src="https://www.altenburg.com.br/arquivos/ids/170511/colchao-relax-spring-casal.jpg?v=638248768707230000" alt="Colchão Relax Spring Casal" class="product-image">
-                <h3 class="product-title">Colchão Relax Spring Casal</h3>
-                <p class="product-description">Conforto e durabilidade com molas ensacadas individualmente.</p>
-                <p class="product-price">R$ 1.899,90</p>
-                <p class="product-stock">Disponível: 10 unidades</p>
-                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
-            </div>
 
-            <!-- Produto 2 -->
+        <!-- Blend Luxo -->
+        <h2 id="blend-luxo">Blend Luxo</h2>
+        <div class="carousel">
             <div class="product-item">
-                <img src="https://www.altenburg.com.br/arquivos/ids/172193/Colchao_Altenburg_SoftFlex.jpg?v=638353099867270000" alt="Colchão SoftFlex Solteiro" class="product-image">
-                <h3 class="product-title">Colchão SoftFlex Solteiro</h3>
+                <img src="https://www.altenburg.com.br/arquivos/ids/172193/Colchao_Altenburg_SoftFlex.jpg?v=638353099867270000" alt="Colchão SoftFlex" class="product-image">
+                <h3 class="product-title">Colchão SoftFlex</h3>
                 <p class="product-description">Macio, ergonômico, ideal para o suporte corporal.</p>
                 <p class="product-price">R$ 1.099,90</p>
                 <p class="product-stock">Disponível: 15 unidades</p>
                 <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
+            <div class="product-item">
+                <img src="https://www.altenburg.com.br/arquivos/ids/170511/colchao-relax-spring-casal.jpg?v=638248768707230000" alt="Colchão Relax Spring" class="product-image">
+                <h3 class="product-title">Colchão Relax Spring</h3>
+                <p class="product-description">Conforto e durabilidade com molas ensacadas individualmente.</p>
+                <p class="product-price">R$ 1.899,90</p>
+                <p class="product-stock">Disponível: 10 unidades</p>
+                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
+            </div>
         </div>
 
-        <h2 id="roupas-de-cama">Roupas de Cama</h2>
-        <div class="products-grid">
-            <!-- Produto 3 -->
+        <!-- Algodão Lux -->
+        <h2 id="algodao-lux">Algodão Lux</h2>
+        <div class="carousel">
             <div class="product-item">
-                <img src="https://www.altenburg.com.br/arquivos/ids/171133/Jogo_de_Lencol.jpg?v=638272127978370000" alt="Jogo de Lençol Altenburg" class="product-image">
-                <h3 class="product-title">Jogo de Lençol Altenburg Queen</h3>
+                <img src="https://www.altenburg.com.br/arquivos/ids/171133/Jogo_de_Lencol.jpg?v=638272127978370000" alt="Jogo de Lençol Queen" class="product-image">
+                <h3 class="product-title">Jogo de Lençol Queen</h3>
                 <p class="product-description">Jogo de lençol 100% algodão, conforto para suas noites.</p>
                 <p class="product-price">R$ 249,90</p>
                 <p class="product-stock">Disponível: 25 unidades</p>
                 <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
-
-            <!-- Produto 4 -->
             <div class="product-item">
-                <img src="https://www.altenburg.com.br/arquivos/ids/171235/Edredom.jpg?v=638272215024470000" alt="Edredom Altenburg Queen" class="product-image">
-                <h3 class="product-title">Edredom Altenburg Queen</h3>
+                <img src="https://www.altenburg.com.br/arquivos/ids/171235/Edredom.jpg?v=638272215024470000" alt="Edredom Queen" class="product-image">
+                <h3 class="product-title">Edredom Queen</h3>
                 <p class="product-description">Aconchegante, com toque de algodão e preenchimento macio.</p>
                 <p class="product-price">R$ 499,90</p>
                 <p class="product-stock">Disponível: 12 unidades</p>
@@ -231,25 +238,44 @@
             </div>
         </div>
 
-        <h2 id="almofadas">Almofadas</h2>
-        <div class="products-grid">
-            <!-- Produto 5 -->
+        <!-- Travesseiros -->
+        <h2 id="travesseiros">Travesseiros</h2>
+        <div class="carousel">
             <div class="product-item">
-                <img src="https://www.altenburg.com.br/arquivos/ids/171147/Travesseiro_Altenburg.jpg?v=638272175522600000" alt="Travesseiro Altenburg" class="product-image">
-                <h3 class="product-title">Travesseiro Altenburg Látex</h3>
-                <p class="product-description">Travesseiro anatômico de alta densidade, com látex natural.</p>
-                <p class="product-price">R$ 89,90</p>
-                <p class="product-stock">Disponível: 30 unidades</p>
+                <img src="https://www.altenburg.com.br/arquivos/ids/171147/Travesseiro_Altenburg.jpg?v=638272175522600000" alt="Travesseiro de Pluma" class="product-image">
+                <h3 class="product-title">Travesseiro de Pluma</h3>
+                <p class="product-description">Suavidade e conforto com enchimento de pluma de ganso.</p>
+                <p class="product-price">R$ 299,90</p>
+                <p class="product-stock">Disponível: 40 unidades</p>
                 <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
-
-            <!-- Produto 6 -->
             <div class="product-item">
-                <img src="https://www.altenburg.com.br/arquivos/ids/171348/Travesseiro_Anatomic.jpg?v=638272431734000000" alt="Travesseiro Anatomic Viscoelástico" class="product-image">
+                <img src="https://www.altenburg.com.br/arquivos/ids/171348/Travesseiro_Anatomic.jpg?v=638272431734000000" alt="Travesseiro Anatomic" class="product-image">
                 <h3 class="product-title">Travesseiro Anatomic Viscoelástico</h3>
                 <p class="product-description">Ergonômico, adapta-se ao contorno da cabeça e pescoço.</p>
                 <p class="product-price">R$ 199,90</p>
                 <p class="product-stock">Disponível: 20 unidades</p>
+                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <!-- Toque Acetinado -->
+        <h2 id="toque-acetinado">Toque Acetinado</h2>
+        <div class="carousel">
+            <div class="product-item">
+                <img src="https://www.altenburg.com.br/arquivos/ids/171212/Cobreleito.jpg?v=638272174072900000" alt="Cobreleito Queen" class="product-image">
+                <h3 class="product-title">Cobreleito Queen</h3>
+                <p class="product-description">Toque acetinado, com brilho elegante e maciez.</p>
+                <p class="product-price">R$ 379,90</p>
+                <p class="product-stock">Disponível: 18 unidades</p>
+                <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-item">
+                <img src="https://www.altenburg.com.br/arquivos/ids/171223/Jogo_de_Lencol_Seda.jpg?v=638272185047300000" alt="Jogo de Lençol Seda" class="product-image">
+                <h3 class="product-title">Jogo de Lençol Seda</h3>
+                <p class="product-description">Luxuoso, toque de seda e suavidade incomparável.</p>
+                <p class="product-price">R$ 499,90</p>
+                <p class="product-stock">Disponível: 8 unidades</p>
                 <button class="add-to-cart-btn" onclick="openModal()">Adicionar ao Carrinho</button>
             </div>
         </div>
