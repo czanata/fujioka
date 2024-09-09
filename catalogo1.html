@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Catálogo Altenburg</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos da página */
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #003b6f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Catálogo */
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .produto {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .produto:hover {
+            transform: scale(1.05);
+        }
+
+        .produto img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .produto h3 {
+            color: #003b6f;
+            font-size: 1.5rem;
+            margin: 15px 0 10px;
+        }
+
+        .produto p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .produto .preco {
+            color: #e91e63;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .produto .quantidade {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .produto button {
+            background-color: #003b6f;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .produto button:hover {
+            background-color: #005092;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #003b6f;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Catálogo de Produtos Altenburg</h1>
+        <p>Conforto e Qualidade que você merece.</p>
+    </header>
+
+    <!-- Catálogo de produtos -->
+    <section class="catalogo">
+        <div class="produto">
+            <img src="https://via.placeholder.com/300x200.png?text=Travesseiro+Altenburg" alt="Travesseiro Altenburg">
+            <h3>Travesseiro Altenburg</h3>
+            <p>Travesseiro super macio e confortável, ideal para noites tranquilas de sono.</p>
+            <p class="preco">R$ 59,90</p>
+            <p class="quantidade">Disponível: 120 unidades</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/300x200.png?text=Edredom+Altenburg" alt="Edredom Altenburg">
+            <h3>Edredom Altenburg</h3>
+            <p>Edredom super aconchegante, ideal para os dias frios.</p>
+            <p class="preco">R$ 199,90</p>
+            <p class="quantidade">Disponível: 50 unidades</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/300x200.png?text=Jogo+de+Cama+Altenburg" alt="Jogo de Cama Altenburg">
+            <h3>Jogo de Cama Altenburg</h3>
+            <p>Jogo de cama de alta qualidade com toque suave para noites confortáveis.</p>
+            <p class="preco">R$ 149,90</p>
+            <p class="quantidade">Disponível: 80 unidades</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/300x200.png?text=Toalha+Altenburg" alt="Toalha Altenburg">
+            <h3>Toalha Altenburg</h3>
+            <p>Toalha de banho com toque macio, absorção eficiente e grande durabilidade.</p>
+            <p class="preco">R$ 39,90</p>
+            <p class="quantidade">Disponível: 150 unidades</p>
+            <button>Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Altenburg. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
