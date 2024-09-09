@@ -3,167 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Catálogo Altenburg</title>
     <style>
-        /* Reset básico */
-        * {
+        /* Estilos globais */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f8f8;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Estilos da página */
-        body {
-            background-color: #f4f4f4;
             color: #333;
         }
 
-        /* Cabeçalho */
         header {
-            background-color: #003b6f;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-        }
-
-        /* Catálogo */
-        .catalogo {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .produto {
             background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 15px;
+            border-bottom: 2px solid #e5e5e5;
             padding: 20px;
-            width: 300px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .produto:hover {
-            transform: scale(1.05);
-        }
-
-        .produto img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .produto h3 {
-            color: #003b6f;
-            font-size: 1.5rem;
-            margin: 15px 0 10px;
-        }
-
-        .produto p {
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-
-        .produto .preco {
-            color: #e91e63;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .produto .quantidade {
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        .produto button {
-            background-color: #003b6f;
-            color: #fff;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .produto button:hover {
-            background-color: #005092;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #003b6f;
-            color: #fff;
             text-align: center;
-            padding: 15px 0;
+        }
+
+        header img {
+            max-width: 150px;
+        }
+
+        nav {
+            background-color: #f0f0f0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
             margin-top: 20px;
         }
+
+        .product-item {
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .product-title {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: #004080;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-stock {
+            font-size: 12px;
+            color: #999;
+        }
+
+        footer {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Cabeçalho -->
     <header>
-        <h1>Catálogo de Produtos Altenburg</h1>
-        <p>Conforto e Qualidade que você merece.</p>
+        <img src="https://www.altenburg.com.br/arquivos/logo.png" alt="Altenburg Logo">
     </header>
 
-    <!-- Catálogo de produtos -->
-    <section class="catalogo">
-        <div class="produto">
-            <img src="https://via.placeholder.com/300x200.png?text=Travesseiro+Altenburg" alt="Travesseiro Altenburg">
-            <h3>Travesseiro Altenburg</h3>
-            <p>Travesseiro super macio e confortável, ideal para noites tranquilas de sono.</p>
-            <p class="preco">R$ 59,90</p>
-            <p class="quantidade">Disponível: 120 unidades</p>
-            <button>Adicionar ao Carrinho</button>
+    <!-- Navegação -->
+    <nav>
+        <a href="#colchoes">Colchões</a>
+        <a href="#roupas-de-cama">Roupas de Cama</a>
+        <a href="#almofadas">Almofadas</a>
+        <a href="#promoções">Promoções</a>
+    </nav>
+
+    <!-- Catálogo de Produtos -->
+    <div class="container">
+        <h2 id="colchoes">Colchões</h2>
+        <div class="products-grid">
+            <!-- Produto 1 -->
+            <div class="product-item">
+                <img src="https://www.altenburg.com.br/arquivos/ids/170511/colchao-relax-spring-casal.jpg?v=638248768707230000" alt="Colchão Relax Spring Casal" class="product-image">
+                <h3 class="product-title">Colchão Relax Spring Casal</h3>
+                <p class="product-description">Conforto e durabilidade com molas ensacadas individualmente.</p>
+                <p class="product-price">R$ 1.899,90</p>
+                <p class="product-stock">Disponível: 10 unidades</p>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-item">
+                <img src="https://www.altenburg.com.br/arquivos/ids/172193/Colchao_Altenburg_SoftFlex.jpg?v=638353099867270000" alt="Colchão SoftFlex Solteiro" class="product-image">
+                <h3 class="product-title">Colchão SoftFlex Solteiro</h3>
+                <p class="product-description">Macio, ergonômico, ideal para o suporte corporal.</p>
+                <p class="product-price">R$ 1.099,90</p>
+                <p class="product-stock">Disponível: 15 unidades</p>
+            </div>
         </div>
 
-        <div class="produto">
-            <img src="https://via.placeholder.com/300x200.png?text=Edredom+Altenburg" alt="Edredom Altenburg">
-            <h3>Edredom Altenburg</h3>
-            <p>Edredom super aconchegante, ideal para os dias frios.</p>
-            <p class="preco">R$ 199,90</p>
-            <p class="quantidade">Disponível: 50 unidades</p>
-            <button>Adicionar ao Carrinho</button>
+        <h2 id="roupas-de-cama">Roupas de Cama</h2>
+        <div class="products-grid">
+            <!-- Produto 3 -->
+            <div class="product-item">
+                <img src="https://www.altenburg.com.br/arquivos/ids/171133/Jogo_de_Lencol.jpg?v=638272127978370000" alt="Jogo de Lençol Altenburg" class="product-image">
+                <h3 class="product-title">Jogo de Lençol Altenburg Queen</h3>
+                <p class="product-description">Jogo de lençol 100% algodão, conforto para suas noites.</p>
+                <p class="product-price">R$ 249,90</p>
+                <p class="product-stock">Disponível: 25 unidades</p>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="product-item">
+                <img src="https://www.altenburg.com.br/arquivos/ids/171235/Edredom.jpg?v=638272215024470000" alt="Edredom Altenburg Queen" class="product-image">
+                <h3 class="product-title">Edredom Altenburg Queen</h3>
+                <p class="product-description">Aconchegante, com toque de algodão e preenchimento macio.</p>
+                <p class="product-price">R$ 499,90</p>
+                <p class="product-stock">Disponível: 12 unidades</p>
+            </div>
         </div>
 
-        <div class="produto">
-            <img src="https://via.placeholder.com/300x200.png?text=Jogo+de+Cama+Altenburg" alt="Jogo de Cama Altenburg">
-            <h3>Jogo de Cama Altenburg</h3>
-            <p>Jogo de cama de alta qualidade com toque suave para noites confortáveis.</p>
-            <p class="preco">R$ 149,90</p>
-            <p class="quantidade">Disponível: 80 unidades</p>
-            <button>Adicionar ao Carrinho</button>
-        </div>
+        <h2 id="almofadas">Almofadas</h2>
+        <div class="products-grid">
+            <!-- Produto 5 -->
+            <div class="product-item">
+                <img src="https://www.altenburg.com.br/arquivos/ids/171147/Travesseiro_Altenburg.jpg?v=638272175522600000" alt="Travesseiro Altenburg" class="product-image">
+                <h3 class="product-title">Travesseiro Altenburg Suporte Firme</h3>
+                <p class="product-description">Perfeito para quem busca um travesseiro com maior firmeza.</p>
+                <p class="product-price">R$ 89,90</p>
+                <p class="product-stock">Disponível: 30 unidades</p>
+            </div>
 
-        <div class="produto">
-            <img src="https://via.placeholder.com/300x200.png?text=Toalha+Altenburg" alt="Toalha Altenburg">
-            <h3>Toalha Altenburg</h3>
-            <p>Toalha de banho com toque macio, absorção eficiente e grande durabilidade.</p>
-            <p class="preco">R$ 39,90</p>
-            <p class="quantidade">Disponível: 150 unidades</p>
-            <button>Adicionar ao Carrinho</button>
+            <!-- Produto 6 -->
+            <div class="product-item">
+                <img src="https://www.altenburg.com.br/arquivos/ids/171348/Travesseiro_Anatomic.jpg?v=638272431734000000" alt="Travesseiro Anatomic Viscoelástico" class="product-image">
+                <h3 class="product-title">Travesseiro Anatomic Viscoelástico</h3>
+                <p class="product-description">Ergonômico, adapta-se ao contorno da cabeça e pescoço.</p>
+                <p class="product-price">R$ 199,90</p>
+                <p class="product-stock">Disponível: 20 unidades</p>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Rodapé -->
     <footer>
-        <p>© 2024 Altenburg. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Altenburg. Todos os direitos reservados.</p>
     </footer>
 
 </body>
